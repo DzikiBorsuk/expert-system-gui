@@ -3,11 +3,10 @@ package expert_system_gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TreeItem;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.io.OWLParserException;
+import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
@@ -31,27 +30,50 @@ public class Ontology
 
     private ShortFormProvider shortForm;
 
+    private OWLClass thing;
 
-
-    public void loadOntologyFromFile(File file)
+    public Ontology()
     {
-        try
-        {
-           ontologyManager = OWLManager.createOWLOntologyManager();
-            dataFactory = ontologyManager.getOWLDataFactory();
-            ontology = ontologyManager.loadOntologyFromOntologyDocument(file);
-            reasonerFactory = new StructuralReasonerFactory();
-            ontologyIRI = ontology.getOntologyID().getOntologyIRI().get();
-        }
-        catch(Throwable e)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle(null);
-            alert.setHeaderText(null);
-            alert.setContentText("Could not load ontology");
-            alert.showAndWait();
-        }
+        ontologyManager = OWLManager.createOWLOntologyManager();
+        dataFactory = ontologyManager.getOWLDataFactory();
+        reasonerFactory = new StructuralReasonerFactory();
+    }
 
+
+    public void loadOntologyFromFile(File file) throws OWLOntologyCreationException, OWLParserException
+    {
+        if (ontology != null)
+            ontologyManager.removeOntology(ontology);
+
+        ontology = ontologyManager.loadOntologyFromOntologyDocument(file);
+        ontologyIRI = ontology.getOntologyID().getOntologyIRI().get();
+        reasoner = reasonerFactory.createReasoner(ontology);
+        thing = ontologyManager.getOWLDataFactory().getOWLThing();
+    }
+
+    public void printOntologyToTreeView(TreeItem<String> root)
+    {
+        reasoner = reasonerFactory.createReasoner(ontology);
+        printOntologyToTreeView(root, thing);
+        reasoner.dispose();
+    }
+
+    private void printOntologyToTreeView(TreeItem<String> root, OWLClass cl)
+    {
+        if (reasoner.isSatisfiable(cl))
+        {
+            int i = 0;
+            for (OWLClass child : reasoner.getSubClasses(cl, true).getFlattened())
+            {
+                if (!child.equals(cl) && reasoner.isSatisfiable(child))
+                {
+                    root.getChildren().add(new TreeItem<>(child.getIRI().getShortForm()));
+                    printOntologyToTreeView(root.getChildren().get(i), child);
+                    i++;
+
+                }
+            }
+        }
     }
 
     public OWLOntology getOntology()

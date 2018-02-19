@@ -2,10 +2,14 @@ package expert_system_gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.semanticweb.owlapi.model.IRI;
+import javafx.stage.Window;
+import org.semanticweb.owlapi.model.*;
 
 import java.io.File;
 
@@ -16,25 +20,58 @@ public class Controller
     TreeView<String> classHierarchy;
 
     @FXML
+    AnchorPane MainWindow;
+
+
+    public void initialize() {
+       // classHierarchy.setRoot(new TreeItem<>("Thing"));
+    }
+
+    @FXML
     private void loadOntologyClick(ActionEvent event)
     {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Load ontology file");
         FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("OWL files (*.owl)", "*.owl");
         fileChooser.getExtensionFilters().add(filter);
-        File file = fileChooser.showOpenDialog(new Stage());
+        fileChooser.setInitialDirectory(new File("."));
+        Window window = MainWindow.getScene().getWindow();
+        File file = fileChooser.showOpenDialog(window).getAbsoluteFile();
+        //File file = new File("C:\\Users\\0bobe\\Desktop\\");
 
-        Main.getInstance().ontology.loadOntologyFromFile(file);
+        if (file != null)
+        {
+            if (file.exists() == true)
+            {
+                try
+                {
+                    Main.getInstance().ontology.loadOntologyFromFile(file.getAbsoluteFile());
+                } catch (Throwable e)
+                {
+                    e.getCause();
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle(null);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Could not load ontology.");
+                    alert.showAndWait();
 
-        //TreeView<String> root = new TreeView<>("Thing");
+                }
+                TreeItem<String> rootItem = new TreeItem<>("Thing");
+                classHierarchy.setRoot(rootItem);
 
-        IRI ontologyIRI = Main.getInstance().ontology.getOntology().getOntologyID().getOntologyIRI().get();
-        IRI documentIRI = Main.getInstance().ontology.getOntologyManager().getOntologyDocumentIRI(Main.getInstance().ontology.getOntology());
-        System.out.println(ontologyIRI == null ? "anonymous" : ontologyIRI
-                .toQuotedString());
-        System.out.println("    from " + documentIRI.toQuotedString());
+                Main.getInstance().ontology.printOntologyToTreeView(rootItem);
 
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("File does not exist.");
+                alert.setHeaderText(null);
+                alert.setContentText("\""+file.getAbsolutePath() + "\" does not exist");
+                alert.showAndWait();
 
+            }
+        }
     }
 
 }
