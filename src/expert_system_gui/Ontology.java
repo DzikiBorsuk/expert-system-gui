@@ -12,8 +12,11 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 import uk.ac.manchester.cs.jfact.*;
+import uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyImpl;
 
 import java.io.File;
+import java.util.ArrayList;
+
 
 public class Ontology
 {
@@ -37,7 +40,6 @@ public class Ontology
     {
         ontologyManager = OWLManager.createOWLOntologyManager();
         dataFactory = ontologyManager.getOWLDataFactory();
-        reasonerFactory = new StructuralReasonerFactory();
         reasonerFactory = new JFactFactory();
     }
 
@@ -78,6 +80,61 @@ public class Ontology
             }
         }
     }
+
+    public ArrayList<String> listOfObjectProperties()
+    {
+        reasonerFactory = new StructuralReasonerFactory();
+        reasoner = reasonerFactory.createReasoner(ontology);
+
+        OWLObjectProperty topProperty = ontologyManager.getOWLDataFactory().getOWLTopObjectProperty();
+        OWLObjectProperty bottomProperty = ontologyManager.getOWLDataFactory().getOWLBottomObjectProperty();
+        ArrayList<String> list = new ArrayList<>();
+
+        for (OWLObjectPropertyExpression child : reasoner.getSubObjectProperties(topProperty, false).getFlattened())
+        {
+            if (!reasoner.getSubObjectProperties(child).isEmpty() && reasoner.getSubObjectProperties(child, true).containsEntity(bottomProperty))
+            {
+                String str = child.getNamedProperty().getIRI().getShortForm();
+                if (!list.contains(str))
+                    list.add(str);
+            }
+        }
+
+        reasoner.dispose();
+        return list;
+    }
+
+    public ArrayList<String> listOfClassesInRangeOfObjectProperties(String ObjectPropertyShortForm)
+    {
+        reasonerFactory =new StructuralReasonerFactory();// new JFactFactory();
+        reasoner = reasonerFactory.createReasoner(ontology);
+        IRI propertyIRI = IRI.create(ontologyIRI.getIRIString() + "#" + ObjectPropertyShortForm);
+        ArrayList<String> list = new ArrayList<>();
+
+        OWLClass Nothing = ontologyManager.getOWLDataFactory().getOWLNothing();
+
+        OWLObjectPropertyExpression property = ontologyManager.getOWLDataFactory().getOWLObjectProperty(propertyIRI);
+
+
+        for (OWLClass child : reasoner.getObjectPropertyRanges(property, true).getFlattened())
+        {
+
+
+            for(OWLClass child2 : reasoner.getSubClasses(child,false).getFlattened())
+            {
+                 if (!reasoner.getSubClasses(child2).isEmpty() && reasoner.getSubClasses(child2, true).containsEntity(Nothing))
+                 {
+                String str = child2.getIRI().getShortForm();
+                 if (!list.contains(str))
+                list.add(str);
+                 }
+            }
+        }
+
+
+        return list;
+    }
+
 
     public OWLOntology getOntology()
     {

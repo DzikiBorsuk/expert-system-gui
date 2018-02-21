@@ -1,6 +1,9 @@
 package expert_system_gui;
 
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,6 +14,7 @@ import javafx.stage.Window;
 import org.semanticweb.owlapi.model.*;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class Controller
 {
@@ -43,10 +47,9 @@ public class Controller
     Button ButtonAddObjectProperty;
 
 
-
-
-    public void initialize() {
-       // classHierarchy.setRoot(new TreeItem<>("Thing"));
+    public void initialize()
+    {
+        // classHierarchy.setRoot(new TreeItem<>("Thing"));
     }
 
     @FXML
@@ -83,16 +86,44 @@ public class Controller
 
                 Main.getInstance().ontology.printOntologyToTreeView(rootItem);
 
-            }
-            else
+                ArrayList<String> list = Main.getInstance().ontology.listOfObjectProperties();
+
+                ObservableList<String> ObjectPropertiesList = FXCollections.observableArrayList(list);
+
+                ComboBoxSelectObjectProperty.setItems(ObjectPropertiesList);
+
+
+            } else
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("File does not exist.");
                 alert.setHeaderText(null);
-                alert.setContentText("\""+file.getAbsolutePath() + "\" does not exist");
+                alert.setContentText("\"" + file.getAbsolutePath() + "\" does not exist");
                 alert.showAndWait();
             }
         }
+    }
+
+    @FXML
+    private void ObjectPropertySelected(ActionEvent event)
+    {
+        String property = ComboBoxSelectObjectProperty.getValue();
+        ArrayList<String> list = Main.getInstance().ontology.listOfClassesInRangeOfObjectProperties(property);
+        ObservableList<String> inRange = FXCollections.observableArrayList(list);
+        ComboBoxSelectClass.setItems(inRange);
+    }
+
+    @FXML
+    private void ButtonResetObjectPropertyClick(ActionEvent event)
+    {
+        ObjectPropertiesList.setItems(FXCollections.observableArrayList());
+    }
+
+    @FXML
+    private void ButtonAddObjectPropertyClick(ActionEvent event)
+    {
+        if (ComboBoxSelectClass.getValue() != null && ComboBoxSelectObjectProperty.getValue() != null)
+            ObjectPropertiesList.getItems().add(ComboBoxSelectObjectProperty.getValue() + " " + ComboBoxSelectClass.getValue());
     }
 
     @FXML

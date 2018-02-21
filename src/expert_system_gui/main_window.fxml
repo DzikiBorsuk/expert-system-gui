@@ -114,9 +114,9 @@
                                        </content>
                                     </TitledPane>
                                     <ComboBox fx:id="ComboBoxSelectDataProperty" layoutX="21.0" layoutY="518.0" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="515.0" />
-                                    <ComboBox fx:id="ComboBoxSelectObjectProperty" layoutX="21.0" layoutY="515.0" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
-                                    <Button fx:id="ButtonResetObjectProperty" layoutX="21.0" layoutY="591.0" mnemonicParsing="false" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonAddObjectProperty" layoutX="198.0" layoutY="590.0" mnemonicParsing="false" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="198.0" AnchorPane.topAnchor="590.0" />
+                                    <ComboBox fx:id="ComboBoxSelectObjectProperty" layoutX="21.0" layoutY="515.0" onAction="#ObjectPropertySelected" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
+                                    <Button fx:id="ButtonResetObjectProperty" layoutX="21.0" layoutY="591.0" mnemonicParsing="false" onAction="#ButtonResetObjectPropertyClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
+                                    <Button fx:id="ButtonAddObjectProperty" layoutX="198.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonAddObjectPropertyClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="198.0" AnchorPane.topAnchor="590.0" />
                                     <Button layoutX="360.0" layoutY="585.0" mnemonicParsing="false" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
                                     <Button layoutX="532.0" layoutY="585.0" mnemonicParsing="false" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="532.0" AnchorPane.topAnchor="590.0" />
                                     <ComboBox fx:id="ComboBoxSelectClass" layoutX="21.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" />
@@ -124,7 +124,7 @@
                                  </children></AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Untitled Tab 2">
+                      <Tab text="Add to ontology">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                         </content>
