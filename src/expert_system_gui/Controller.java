@@ -1,10 +1,9 @@
 package expert_system_gui;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -22,6 +21,29 @@ public class Controller
     @FXML
     AnchorPane MainWindow;
 
+    @FXML
+    ListView<String> ObjectPropertiesList;
+
+    @FXML
+    ListView<String> DataPropertiesList;
+
+    @FXML
+    ComboBox<String> ComboBoxSelectObjectProperty;
+
+    @FXML
+    ComboBox<String> ComboBoxSelectDataProperty;
+
+    @FXML
+    ComboBox<String> ComboBoxSelectClass;
+
+    @FXML
+    Button ButtonResetObjectProperty;
+
+    @FXML
+    Button ButtonAddObjectProperty;
+
+
+
 
     public void initialize() {
        // classHierarchy.setRoot(new TreeItem<>("Thing"));
@@ -36,7 +58,7 @@ public class Controller
         fileChooser.getExtensionFilters().add(filter);
         fileChooser.setInitialDirectory(new File("."));
         Window window = MainWindow.getScene().getWindow();
-        File file = fileChooser.showOpenDialog(window).getAbsoluteFile();
+        File file = fileChooser.showOpenDialog(window);
         //File file = new File("C:\\Users\\0bobe\\Desktop\\");
 
         if (file != null)
@@ -69,9 +91,14 @@ public class Controller
                 alert.setHeaderText(null);
                 alert.setContentText("\""+file.getAbsolutePath() + "\" does not exist");
                 alert.showAndWait();
-
             }
         }
+    }
+
+    @FXML
+    private void exitClick(ActionEvent event)
+    {
+        Platform.exit();
     }
 
 }

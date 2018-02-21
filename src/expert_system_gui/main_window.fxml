@@ -23,7 +23,7 @@
               <MenuItem fx:id="loadOntology" mnemonicParsing="false" onAction="#loadOntologyClick" text="Load" />
                   <MenuItem mnemonicParsing="false" text="Save" />
                   <MenuItem mnemonicParsing="false" text="Save as" />
-                  <MenuItem mnemonicParsing="false" text="Exit" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitClick" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -113,12 +113,14 @@
                                           </AnchorPane>
                                        </content>
                                     </TitledPane>
-                                    <ComboBox layoutX="21.0" layoutY="518.0" prefHeight="31.0" prefWidth="320.0" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="515.0" />
-                                    <ComboBox layoutX="21.0" layoutY="515.0" prefHeight="31.0" prefWidth="320.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
-                                    <Button layoutX="21.0" layoutY="563.0" mnemonicParsing="false" prefWidth="150.0" text="Button" AnchorPane.topAnchor="560.0" />
-                                    <Button layoutX="191.0" layoutY="560.0" mnemonicParsing="false" prefWidth="150.0" text="Button" AnchorPane.topAnchor="560.0" />
-                                    <Button layoutX="361.0" layoutY="560.0" mnemonicParsing="false" prefWidth="150.0" text="Button" AnchorPane.topAnchor="560.0" />
-                                    <Button layoutX="532.0" layoutY="560.0" mnemonicParsing="false" prefWidth="150.0" text="Button" AnchorPane.topAnchor="560.0" />
+                                    <ComboBox fx:id="ComboBoxSelectDataProperty" layoutX="21.0" layoutY="518.0" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="515.0" />
+                                    <ComboBox fx:id="ComboBoxSelectObjectProperty" layoutX="21.0" layoutY="515.0" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
+                                    <Button fx:id="ButtonResetObjectProperty" layoutX="21.0" layoutY="591.0" mnemonicParsing="false" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
+                                    <Button fx:id="ButtonAddObjectProperty" layoutX="198.0" layoutY="590.0" mnemonicParsing="false" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="198.0" AnchorPane.topAnchor="590.0" />
+                                    <Button layoutX="360.0" layoutY="585.0" mnemonicParsing="false" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
+                                    <Button layoutX="532.0" layoutY="585.0" mnemonicParsing="false" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="532.0" AnchorPane.topAnchor="590.0" />
+                                    <ComboBox fx:id="ComboBoxSelectClass" layoutX="21.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" />
+                                    <ComboBox layoutX="361.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" />
                                  </children></AnchorPane>
                         </content>
                       </Tab>

@@ -11,6 +11,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.semanticweb.owlapi.util.ShortFormProvider;
+import uk.ac.manchester.cs.jfact.*;
 
 import java.io.File;
 
@@ -37,6 +38,7 @@ public class Ontology
         ontologyManager = OWLManager.createOWLOntologyManager();
         dataFactory = ontologyManager.getOWLDataFactory();
         reasonerFactory = new StructuralReasonerFactory();
+        reasonerFactory = new JFactFactory();
     }
 
 
@@ -53,6 +55,7 @@ public class Ontology
 
     public void printOntologyToTreeView(TreeItem<String> root)
     {
+        reasonerFactory = new StructuralReasonerFactory();
         reasoner = reasonerFactory.createReasoner(ontology);
         printOntologyToTreeView(root, thing);
         reasoner.dispose();
