@@ -31,6 +31,8 @@ public class Main extends Application
         primaryStage.setTitle("OWL expert system");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        ontology = new Ontology();
     }
 
 
