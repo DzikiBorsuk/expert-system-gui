@@ -1,0 +1,1391 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2017/11/vehicles-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2017/11/vehicles-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2017/11/vehicles-ontology"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelAstra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMWM4"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCompany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenTiguana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ford"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudiQ7"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMWS1000"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenGolf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesBClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANTGL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrontWheelDrive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#10CylinderPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesSClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenPassat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModelX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cabrio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FordMondeo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaFabia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StationWagon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6SpeedManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelVectra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoV40"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Powertrain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMWModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaOctavia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasManufacturingYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tesla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaSuperb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudiA6"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMWX5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomaticTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FordMustang"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelCorsa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#5SpeedManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoS80"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHorsePower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudiR8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesGLA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volvo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volkswagen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CombustionEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#8CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMW"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motorcycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkadaRapid"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVehicleType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModelS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoFH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Opel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehiclePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudiA4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FordFiesta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelZafira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RearWheelDrive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANTGX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#10CylinderDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MAN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mercedes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudiModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolovXC60"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SUV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FordFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPowerTrain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Engine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AllWheelDrive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skoda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hatchback"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesCClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVehicleModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Truck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#8CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolksWagenPolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FordModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sedan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANTGA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANF2000"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AllWheelDrive"/>
+        <Class IRI="#Powertrain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audi"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudiA4"/>
+        <Class IRI="#AudiModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudiA6"/>
+        <Class IRI="#AudiModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudiQ7"/>
+        <Class IRI="#AudiModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudiR8"/>
+        <Class IRI="#AudiModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomaticTransmission"/>
+        <Class IRI="#Transmission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMW"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMWM4"/>
+        <Class IRI="#BMWModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMWS1000"/>
+        <Class IRI="#BMWModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMWX5"/>
+        <Class IRI="#BMWModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <Class IRI="#VehiclePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cabrio"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Company"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#Engine"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#Powertrain"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VehicleModel"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasNumberOfWheel"/>
+            <DataIntersectionOf>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataIntersectionOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CombustionEngine"/>
+        <Class IRI="#Engine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DieselEngine"/>
+        <Class IRI="#CombustionEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricEngine"/>
+        <Class IRI="#Engine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engine"/>
+        <Class IRI="#VehiclePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ford"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FordFiesta"/>
+        <Class IRI="#FordModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FordFocus"/>
+        <Class IRI="#FordModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FordMondeo"/>
+        <Class IRI="#FordModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FordMustang"/>
+        <Class IRI="#FordModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrontWheelDrive"/>
+        <Class IRI="#Powertrain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hatchback"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MAN"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MANF2000"/>
+        <Class IRI="#MANModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MANTGA"/>
+        <Class IRI="#MANModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MANTGL"/>
+        <Class IRI="#MANModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MANTGX"/>
+        <Class IRI="#MANModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManualTransmission"/>
+        <Class IRI="#Transmission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mercedes"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MercedesBClass"/>
+        <Class IRI="#MercedesModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MercedesCClass"/>
+        <Class IRI="#MercedesModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MercedesGLA"/>
+        <Class IRI="#MercedesModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MercedesSClass"/>
+        <Class IRI="#MercedesModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Company"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#Engine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#Powertrain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#Transmission"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VehicleModel"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Motorcycle"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNumberOfWheel"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Opel"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpelAstra"/>
+        <Class IRI="#OpelModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpelCorsa"/>
+        <Class IRI="#OpelModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpelVectra"/>
+        <Class IRI="#OpelModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpelZafira"/>
+        <Class IRI="#OpelModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PetrolEngine"/>
+        <Class IRI="#CombustionEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Powertrain"/>
+        <Class IRI="#VehiclePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RearWheelDrive"/>
+        <Class IRI="#Powertrain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SUV"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sedan"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkadaRapid"/>
+        <Class IRI="#SkodaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skoda"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkodaFabia"/>
+        <Class IRI="#SkodaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkodaOctavia"/>
+        <Class IRI="#SkodaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkodaSuperb"/>
+        <Class IRI="#SkodaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StationWagon"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tesla"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TeslaModelS"/>
+        <Class IRI="#TeslaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TeslaModelX"/>
+        <Class IRI="#TeslaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transmission"/>
+        <Class IRI="#VehiclePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Company"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#Engine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#Powertrain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#Transmission"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VehicleModel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truck"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNumberOfWheel"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolksWagenPolo"/>
+        <Class IRI="#VolkswagenModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volkswagen"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolkswagenGolf"/>
+        <Class IRI="#VolkswagenModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolkswagenPassat"/>
+        <Class IRI="#VolkswagenModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolkswagenTiguana"/>
+        <Class IRI="#VolkswagenModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolovXC60"/>
+        <Class IRI="#VolvoModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volvo"/>
+        <Class IRI="#Company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolvoFH"/>
+        <Class IRI="#VolvoModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolvoModel"/>
+        <Class IRI="#VehicleModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolvoS80"/>
+        <Class IRI="#VolvoModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolvoV40"/>
+        <Class IRI="#VolvoModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#10CylinderDieselEngine"/>
+        <Class IRI="#DieselEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#10CylinderPetrolEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2CylindersDieselEngine"/>
+        <Class IRI="#DieselEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2CylindersPetrolEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#4CylindersDieselEngine"/>
+        <Class IRI="#DieselEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#4CylindersPetrolEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#5SpeedManualTransmission"/>
+        <Class IRI="#ManualTransmission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#6CylindersDieselEngine"/>
+        <Class IRI="#DieselEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#6CylindersPetrolEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#6SpeedManualTransmission"/>
+        <Class IRI="#ManualTransmission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#8CylindersDieselEngine"/>
+        <Class IRI="#DieselEngine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#8CylindersPetrolEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AllWheelDrive"/>
+        <Class IRI="#FrontWheelDrive"/>
+        <Class IRI="#RearWheelDrive"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Audi"/>
+        <Class IRI="#BMW"/>
+        <Class IRI="#Ford"/>
+        <Class IRI="#Mercedes"/>
+        <Class IRI="#Opel"/>
+        <Class IRI="#Skoda"/>
+        <Class IRI="#Tesla"/>
+        <Class IRI="#Volkswagen"/>
+        <Class IRI="#Volvo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiA4"/>
+        <Class IRI="#AudiA6"/>
+        <Class IRI="#AudiQ7"/>
+        <Class IRI="#AudiR8"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AutomaticTransmission"/>
+        <Class IRI="#ManualTransmission"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BMWM4"/>
+        <Class IRI="#BMWS1000"/>
+        <Class IRI="#BMWX5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Body"/>
+        <Class IRI="#Motorcycle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Car"/>
+        <Class IRI="#Motorcycle"/>
+        <Class IRI="#Truck"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DieselEngine"/>
+        <Class IRI="#PetrolEngine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FordFiesta"/>
+        <Class IRI="#FordFocus"/>
+        <Class IRI="#FordMondeo"/>
+        <Class IRI="#FordMustang"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MANF2000"/>
+        <Class IRI="#MANTGA"/>
+        <Class IRI="#MANTGL"/>
+        <Class IRI="#MANTGX"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MercedesBClass"/>
+        <Class IRI="#MercedesCClass"/>
+        <Class IRI="#MercedesGLA"/>
+        <Class IRI="#MercedesSClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OpelAstra"/>
+        <Class IRI="#OpelCorsa"/>
+        <Class IRI="#OpelVectra"/>
+        <Class IRI="#OpelZafira"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SkadaRapid"/>
+        <Class IRI="#SkodaFabia"/>
+        <Class IRI="#SkodaOctavia"/>
+        <Class IRI="#SkodaSuperb"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#TeslaModelS"/>
+        <Class IRI="#TeslaModelX"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#VolksWagenPolo"/>
+        <Class IRI="#VolkswagenGolf"/>
+        <Class IRI="#VolkswagenPassat"/>
+        <Class IRI="#VolkswagenTiguana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#VolovXC60"/>
+        <Class IRI="#VolvoFH"/>
+        <Class IRI="#VolvoS80"/>
+        <Class IRI="#VolvoV40"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#2CylindersDieselEngine"/>
+        <Class IRI="#4CylindersDieselEngine"/>
+        <Class IRI="#6CylindersDieselEngine"/>
+        <Class IRI="#8CylindersDieselEngine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#2CylindersPetrolEngine"/>
+        <Class IRI="#4CylindersPetrolEngine"/>
+        <Class IRI="#6CylindersPetrolEngine"/>
+        <Class IRI="#8CylindersPetrolEngine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#5SpeedManualTransmission"/>
+        <Class IRI="#6SpeedManualTransmission"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#SUV"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Audi"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#AudiQ7"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#BMW"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#2CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#RearWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#BMWS1000"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Motorcycle"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#MAN"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#RearWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#MANTGX"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Truck"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Cabrio"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Mercedes"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#8CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#RearWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#MercedesSClass"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Tesla"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#ElectricEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#TeslaModelS"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">211</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2008</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">560</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3982</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">469</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">525</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBody"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEngine"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPowerTrain"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTransmission"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPart"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBody"/>
+        <Class IRI="#Body"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCompany"/>
+        <Class IRI="#Company"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEngine"/>
+        <Class IRI="#Engine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPowerTrain"/>
+        <Class IRI="#Powertrain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTransmission"/>
+        <Class IRI="#Transmission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVehicleModel"/>
+        <Class IRI="#VehicleModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVehicleType"/>
+        <Class IRI="#Vehicle"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHorsePower"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCompany</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">defines manufacturer of parts or vehicle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasHorsePower</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">defines power of engine in non SI unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNumberOfWheel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">defines number of wheel</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
