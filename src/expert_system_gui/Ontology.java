@@ -2,7 +2,6 @@ package expert_system_gui;
 
 
 import javafx.scene.control.TreeItem;
-import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.OWLParserException;
@@ -10,15 +9,15 @@ import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
+import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 import org.semanticweb.owlapi.vocab.OWLFacet;
-import org.semarglproject.vocab.OWL;
 import uk.ac.manchester.cs.jfact.*;
-import uk.ac.manchester.cs.owl.owlapi.OWLLiteralImpl;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Stream;
 
 
 public class Ontology
@@ -62,9 +61,17 @@ public class Ontology
 
     public void saveOntology() throws OWLOntologyStorageException, OWLOntologyCreationException, IOException
     {
-        if(ontology!=null)
+        if (ontology != null)
         {
             ontologyManager.saveOntology(ontology);
+        }
+    }
+
+    public void saveOntologyToFile(File file) throws OWLOntologyStorageException, OWLOntologyCreationException, IOException
+    {
+        if (ontology != null)
+        {
+            ontologyManager.saveOntology(ontology, IRI.create(file.toURI()));
         }
     }
 
@@ -145,7 +152,41 @@ public class Ontology
 
     public List<String> listOfObjectPropertiesOfIndividual(String Individual)
     {
-        return null;
+        OWLNamedIndividual ind = ontologyManager.getOWLDataFactory().getOWLNamedIndividual(getEntityIRI(Individual));
+        Iterator<OWLClassAssertionAxiom> assertionsIterator = ontology.classAssertionAxioms(ind).iterator();
+        ArrayList<String> list = new ArrayList<>();
+        while (assertionsIterator.hasNext())
+        {
+            OWLClassAssertionAxiom assertionAxiom = assertionsIterator.next();
+            OWLObjectProperty property = assertionAxiom.objectPropertiesInSignature().iterator().next();
+            OWLClass cl = assertionAxiom.classesInSignature().iterator().next();
+            String propertyName = getShortForm(property.getIRI());
+            String className = getShortForm(cl.getIRI());
+            list.add(propertyName + " " + className);
+        }
+
+        return list;
+    }
+
+    public List<String> listOfDataPropertiesOfIndividual(String Individual)
+    {
+        OWLNamedIndividual ind = ontologyManager.getOWLDataFactory().getOWLNamedIndividual(getEntityIRI(Individual));
+        Iterator<OWLDataPropertyAssertionAxiom> assertionsIterator = ontology.dataPropertyAssertionAxioms(ind).iterator();
+        ArrayList<String> list = new ArrayList<>();
+
+        reasonerFactory = new ReasonerFactory();
+        reasoner = reasonerFactory.createReasoner(ontology);
+
+        while (assertionsIterator.hasNext())
+        {
+            OWLDataPropertyAssertionAxiom assertionAxiom = assertionsIterator.next();
+            OWLDataProperty property = assertionAxiom.dataPropertiesInSignature().iterator().next();
+            String propertyName = getShortForm(property.getIRI());
+            String value = reasoner.getDataPropertyValues(ind, property).iterator().next().getLiteral();
+            list.add(propertyName + " = " + value);
+        }
+
+        return list;
     }
 
 
@@ -212,9 +253,9 @@ public class Ontology
         {
             String[] splitStr = str.trim().split("\\s+");//0 - property, 1 - restriction, 2 - value
 
-            int value = Integer.parseInt(splitStr[2]);
             OWLDataProperty property = ontologyManager.getOWLDataFactory().getOWLDataProperty(getEntityIRI(splitStr[0]));
             OWLDatatype dataType = getOWLDatatype(splitStr[0]);
+            OWLLiteral value = ontologyManager.getOWLDataFactory().getOWLLiteral(splitStr[2], dataType);
             Set<OWLFacetRestriction> facetRestriction = new HashSet<>();
             switch (splitStr[1])
             {
@@ -267,6 +308,39 @@ public class Ontology
     }
 
 
+    public void addNewIndividual(String IndividualName, List<String> ObjectRestrictionList, List<String> DataRestrictionList)
+    {
+        OWLIndividual newIndividual = ontologyManager.getOWLDataFactory().getOWLNamedIndividual(getEntityIRI(IndividualName));
+        Set<OWLAxiom> axioms = new HashSet<>();
+
+        for (String str : ObjectRestrictionList)
+        {
+            String[] splitStr = str.trim().split("\\s+");//0 - property, 1 - class
+
+            OWLObjectProperty property = ontologyManager.getOWLDataFactory().getOWLObjectProperty(getEntityIRI(splitStr[0]));
+            OWLClass cl = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI(splitStr[1]));
+            OWLClassExpression classExpression = ontologyManager.getOWLDataFactory().getOWLObjectAllValuesFrom(property, cl);
+            OWLClassAssertionAxiom assertionAxiom = dataFactory.getOWLClassAssertionAxiom(classExpression, newIndividual);
+            axioms.add(assertionAxiom);
+        }
+
+        for (String str : DataRestrictionList)
+        {
+            String[] splitStr = str.trim().split("\\s+");//0 - property, 1 - restriction, 2 - value
+
+            OWLDataProperty property = ontologyManager.getOWLDataFactory().getOWLDataProperty(getEntityIRI(splitStr[0]));
+            OWLDatatype datatype = getOWLDatatype(splitStr[0]);
+            OWLLiteral value = ontologyManager.getOWLDataFactory().getOWLLiteral(splitStr[2], datatype);
+            OWLDataPropertyAssertionAxiom assertionAxiom = ontologyManager.getOWLDataFactory().getOWLDataPropertyAssertionAxiom(property, newIndividual, value);
+            axioms.add(assertionAxiom);
+        }
+
+
+        ontologyManager.addAxioms(ontology, axioms);
+
+    }
+
+
     public List<String> listOfInstancesOfClass(OWLClass cl)
     {
         reasonerFactory = new JFactFactory();
@@ -283,6 +357,32 @@ public class Ontology
         return list;
     }
 
+    public boolean classSetIsSatisfiable(List<String> listOfClass)
+    {
+        OWLClass temp = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI("temp"));
+        Set<OWLAxiom> axioms = new HashSet<>();
+        for(String str : listOfClass)
+        {
+            OWLClass cl = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI(str));
+            OWLSubClassOfAxiom subClassOfAxiom = dataFactory.getOWLSubClassOfAxiom(temp,cl);
+            axioms.add(subClassOfAxiom);
+        }
+        ontologyManager.addAxioms(ontology,axioms);
+        boolean satisfable=false;
+        reasonerFactory = new ReasonerFactory();
+        reasoner = reasonerFactory.createReasoner(ontology);
+
+        if(reasoner.isSatisfiable(temp))
+            satisfable=true;
+
+        OWLEntityRemover remover = new OWLEntityRemover(ontology);
+        temp.accept(remover);
+        remover.getChanges().forEach(removeAxiom -> ontologyManager.applyChange(removeAxiom));
+        remover.reset();
+
+        return satisfable;
+    }
+
     public boolean hasDataPropertyNumericRange(String property)
     {
         OWLDatatype data = getOWLDatatype(property);
@@ -294,7 +394,7 @@ public class Ontology
         OWLDataProperty property = ontologyManager.getOWLDataFactory().getOWLDataProperty(getEntityIRI(dataProperty));
         Set<OWLDatatype> dataTypes = new HashSet<>();
         //long line
-        ontology.dataPropertyRangeAxioms(property).forEach(owlDataPropertyRangeAxiom -> owlDataPropertyRangeAxiom.getRange().datatypesInSignature().forEach(owlDatatype -> dataTypes.add(owlDatatype)));
+        ontology.dataPropertyRangeAxioms(property).forEach(owlDataPropertyRangeAxiom -> owlDataPropertyRangeAxiom.getRange().datatypesInSignature().forEach(dataTypes::add));
         OWLDatatype out = null;
         for (OWLDatatype data : dataTypes)
         {
@@ -314,6 +414,22 @@ public class Ontology
         return IRI.create(ontologyIRI + "#" + entity);
     }
 
+    public boolean containsEntity(String entity)
+    {
+        if (ontology != null)
+            return ontology.containsEntityInSignature(getEntityIRI(entity));
+        else
+            return false;
+    }
+
+    public void deleteIndividual(String entity)
+    {
+        OWLEntityRemover remover = new OWLEntityRemover(ontology);
+        OWLNamedIndividual ind = ontologyManager.getOWLDataFactory().getOWLNamedIndividual(getEntityIRI(entity));
+        ind.accept(remover);
+        remover.getChanges().forEach(removeAxiom -> ontologyManager.applyChange(removeAxiom));
+        remover.reset();
+    }
 
     public OWLOntology getOntology()
     {

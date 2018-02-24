@@ -22,19 +22,19 @@
         <Class IRI="#BMWM4"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCompany"/>
+        <Class IRI="#SkodaModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SkodaModel"/>
+        <ObjectProperty IRI="#hasCompany"/>
     </Declaration>
     <Declaration>
         <Class IRI="#VolkswagenTiguana"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ford"/>
+        <Class IRI="#4CylindersPetrolEngine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#4CylindersPetrolEngine"/>
+        <Class IRI="#Ford"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Audi"/>
@@ -172,10 +172,10 @@
         <ObjectProperty IRI="#hasEngine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MercedesGLA"/>
+        <Class IRI="#Volvo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Volvo"/>
+        <Class IRI="#MercedesGLA"/>
     </Declaration>
     <Declaration>
         <Class IRI="#VolvoModel"/>
@@ -194,9 +194,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Motorcycle"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkadaRapid"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasVehicleType"/>
@@ -307,16 +304,19 @@
         <NamedIndividual IRI="#AudiQ7(2008)"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SkodaRapid"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MercedesCClass"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vehicle"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasVehicleModel"/>
+        <Class IRI="#Truck"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Truck"/>
+        <ObjectProperty IRI="#hasVehicleModel"/>
     </Declaration>
     <Declaration>
         <Class IRI="#8CylindersDieselEngine"/>
@@ -667,10 +667,6 @@
         <Class IRI="#Body"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SkadaRapid"/>
-        <Class IRI="#SkodaModel"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Skoda"/>
         <Class IRI="#Company"/>
     </SubClassOf>
@@ -684,6 +680,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SkodaOctavia"/>
+        <Class IRI="#SkodaModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkodaRapid"/>
         <Class IRI="#SkodaModel"/>
     </SubClassOf>
     <SubClassOf>
@@ -909,6 +909,10 @@
         <Class IRI="#Motorcycle"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Body"/>
+        <Class IRI="#Truck"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Car"/>
         <Class IRI="#Motorcycle"/>
         <Class IRI="#Truck"/>
@@ -942,9 +946,9 @@
         <Class IRI="#OpelZafira"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#SkadaRapid"/>
         <Class IRI="#SkodaFabia"/>
         <Class IRI="#SkodaOctavia"/>
+        <Class IRI="#SkodaRapid"/>
         <Class IRI="#SkodaSuperb"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -1024,7 +1028,7 @@
     <ClassAssertion>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasVehicleType"/>
-            <Class IRI="#Car"/>
+            <Class IRI="#Truck"/>
         </ObjectAllValuesFrom>
         <NamedIndividual IRI="#AudiQ7(2008)"/>
     </ClassAssertion>
