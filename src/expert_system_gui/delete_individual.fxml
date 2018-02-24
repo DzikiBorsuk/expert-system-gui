@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="DeleteIndividualWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expert_system_gui.DeleteController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="28.0" layoutY="21.0" text="Individuals" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+               <children>
+                  <ListView fx:id="IndividualListToDelete" layoutX="-8.0" layoutY="1.0" onMouseClicked="#individualListToDeleteItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="391.0" layoutY="201.0" mnemonicParsing="false" onAction="#ButtomDeleteClick" prefHeight="100.0" prefWidth="150.0" text="Delete" AnchorPane.rightAnchor="59.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="29.0" layoutY="531.0" mnemonicParsing="false" onAction="#ButtonOkClick" prefWidth="150.0" text="OK" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="520.0" />
+      <Button layoutX="225.0" layoutY="521.0" mnemonicParsing="false" onAction="#ButtonCancelClick" prefWidth="150.0" text="Cancel" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>
