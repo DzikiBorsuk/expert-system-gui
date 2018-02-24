@@ -61,8 +61,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,14 +70,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1369">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="expert-system-gui.git.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/expert-system-gui.git.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,10 +95,37 @@
       <file leaf-file-name="Ontology.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Ontology.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="911">
-              <caret line="69" column="90" lean-forward="false" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+            <state relative-caret-position="1113">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1519485377120" expanded="true" signature="1946:2055" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="2185:2320" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="2389:2590" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="2673:3215" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="3270:4259" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="4312:5256" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="5340:6157" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="6239:7149" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="7251:8410" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="8460:8829" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="8959:12321" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="12454:14024" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="14091:14465" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="14538:15487" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="15557:15690" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="15756:16269" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="16369:16492" ph="{...}" />
+                <marker date="1519485377120" expanded="false" signature="16537:16552" ph=" { " />
+                <marker date="1519485377120" expanded="false" signature="16598:16604" ph=" }" />
+                <marker date="1519485377120" expanded="true" signature="16659:16812" ph="{...}" />
+                <marker date="1519485377120" expanded="true" signature="16866:17203" ph="{...}" />
+                <marker date="1519485377120" expanded="false" signature="17241:17256" ph=" { " />
+                <marker date="1519485377120" expanded="false" signature="17272:17278" ph=" }" />
+                <marker date="1519485377120" expanded="false" signature="17316:17331" ph=" { " />
+                <marker date="1519485377120" expanded="false" signature="17347:17353" ph=" }" />
+                <marker date="1519485377120" expanded="false" signature="17405:17420" ph=" { " />
+                <marker date="1519485377120" expanded="false" signature="17443:17449" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -97,8 +134,8 @@
       <file leaf-file-name="OntologyProcess.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/Code_v10.tar/Code_v10/OntologyEditor/src/main/java/ontologyanalyzer/model/OntologyProcess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
+            <state relative-caret-position="924">
+              <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -147,8 +184,9 @@
         <option value="$USER_HOME$/Desktop/OntologiaVehicle1.owl" />
         <option value="$USER_HOME$/Desktop/Code_v10.tar/Code_v10/OntologyEditor/src/main/java/ontologyanalyzer/model/OntologyProcess.java" />
         <option value="$PROJECT_DIR$/src/expert_system_gui/Main.java" />
-        <option value="$PROJECT_DIR$/src/expert_system_gui/Controller.java" />
         <option value="$PROJECT_DIR$/src/expert_system_gui/Ontology.java" />
+        <option value="$PROJECT_DIR$/src/expert_system_gui/Controller.java" />
+        <option value="$PROJECT_DIR$/expert-system-gui.git.iml" />
       </list>
     </option>
   </component>
@@ -184,53 +222,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="expert_system_gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert-system-gui.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert-system-gui.git" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="expert_system_gui" type="462c0819:PsiDirectoryNode" />
+              <item name="expert-system-gui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expert-system-gui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,13 +253,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.14375" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="expert-system-gui.git" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -405,11 +409,12 @@
       <workItem from="1518965145373" duration="10299000" />
       <workItem from="1518998485880" duration="3124000" />
       <workItem from="1519058050578" duration="4147000" />
+      <workItem from="1519486170616" duration="274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31128000" />
+    <option name="totallyTimeSpent" value="31402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -417,14 +422,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -434,8 +438,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -443,6 +447,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -472,8 +477,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17135416" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -507,14 +512,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/Code_v10.tar/Code_v10/OntologyEditor/src/main/java/ontologyanalyzer/model/OntologyProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3759">
-          <caret line="179" column="5" lean-forward="true" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/vehicles_ontology.owl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14133">
@@ -559,6 +556,33 @@
           <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1519485377120" expanded="true" signature="1946:2055" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2185:2320" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2389:2590" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2673:3215" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="3270:4259" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="4312:5256" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="5340:6157" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="6239:7149" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="7251:8410" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="8460:8829" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="8959:12321" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="12454:14024" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="14091:14465" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="14538:15487" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="15557:15690" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="15756:16269" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="16369:16492" ph="{...}" />
+            <marker date="1519485377120" expanded="false" signature="16537:16552" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="16598:16604" ph=" }" />
+            <marker date="1519485377120" expanded="true" signature="16659:16812" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="16866:17203" ph="{...}" />
+            <marker date="1519485377120" expanded="false" signature="17241:17256" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17272:17278" ph=" }" />
+            <marker date="1519485377120" expanded="false" signature="17316:17331" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17347:17353" ph=" }" />
+            <marker date="1519485377120" expanded="false" signature="17405:17420" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17443:17449" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -587,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37506">
           <caret line="1786" column="32" lean-forward="true" selection-start-line="1786" selection-start-column="32" selection-end-line="1786" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,12 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="4072" column="86" lean-forward="false" selection-start-line="4072" selection-start-column="86" selection-end-line="4072" selection-end-column="86" />
-          <folding>
-            <element signature="e#44372#44373#0" expanded="false" />
-            <element signature="e#44427#44428#0" expanded="false" />
-            <element signature="e#82444#82445#0" expanded="false" />
-            <element signature="e#82483#82484#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
           <caret line="1767" column="34" lean-forward="true" selection-start-line="1767" selection-start-column="34" selection-end-line="1767" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,13 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/OntologiaVehicle1.owl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="1477" column="0" lean-forward="true" selection-start-line="1477" selection-start-column="0" selection-end-line="1477" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/OntologiaVehicle1.owl" />
     <entry file="file://$USER_HOME$/Desktop/vehicles_ontology.owl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14133">
@@ -793,13 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/owlapi-distribution-5.1.3.jar!/org/semanticweb/owlapi/io/UnparsableOntologyException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/owlapi-distribution-5.1.3.jar!/org/semanticweb/owlapi/io/UnparsableOntologyException.class" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/beans/property/ObjectPropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -835,16 +839,16 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/Code_v10.tar/Code_v10/OntologyEditor/src/main/java/ontologyanalyzer/model/OntologyProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
+        <state relative-caret-position="924">
+          <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -853,21 +857,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Ontology.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="69" column="90" lean-forward="false" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+        <state relative-caret-position="1113">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1519485377120" expanded="true" signature="1946:2055" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2185:2320" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2389:2590" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="2673:3215" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="3270:4259" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="4312:5256" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="5340:6157" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="6239:7149" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="7251:8410" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="8460:8829" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="8959:12321" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="12454:14024" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="14091:14465" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="14538:15487" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="15557:15690" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="15756:16269" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="16369:16492" ph="{...}" />
+            <marker date="1519485377120" expanded="false" signature="16537:16552" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="16598:16604" ph=" }" />
+            <marker date="1519485377120" expanded="true" signature="16659:16812" ph="{...}" />
+            <marker date="1519485377120" expanded="true" signature="16866:17203" ph="{...}" />
+            <marker date="1519485377120" expanded="false" signature="17241:17256" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17272:17278" ph=" }" />
+            <marker date="1519485377120" expanded="false" signature="17316:17331" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17347:17353" ph=" }" />
+            <marker date="1519485377120" expanded="false" signature="17405:17420" ph=" { " />
+            <marker date="1519485377120" expanded="false" signature="17443:17449" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expert_system_gui/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1369">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expert-system-gui.git.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +921,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -930,6 +968,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -937,7 +976,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lib</last-edited>
+          <last-edited>net.sourceforge.owlapi:org.semanticweb.hermit:1.4.1.513</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
