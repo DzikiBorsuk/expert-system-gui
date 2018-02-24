@@ -10,12 +10,10 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
-import org.semanticweb.owlapi.util.ShortFormProvider;
 import org.semanticweb.owlapi.vocab.OWLFacet;
-import uk.ac.manchester.cs.jfact.*;
+//import uk.ac.manchester.cs.jfact.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -34,10 +32,6 @@ public class Ontology
 
     private OWLOntologyManager ontologyManager;
 
-    private ShortFormProvider shortForm;
-
-    private OWLClass thing;
-
     public Ontology()
     {
         ontologyManager = OWLManager.createOWLOntologyManager();
@@ -55,11 +49,10 @@ public class Ontology
         if (ontology.getOntologyID().getOntologyIRI().isPresent())
             ontologyIRI = ontology.getOntologyID().getOntologyIRI().get();
         ///reasoner = reasonerFactory.createReasoner(ontology);
-        thing = ontologyManager.getOWLDataFactory().getOWLThing();
-
+        dataFactory = ontologyManager.getOWLDataFactory();
     }
 
-    public void saveOntology() throws OWLOntologyStorageException, OWLOntologyCreationException, IOException
+    public void saveOntology() throws OWLOntologyStorageException
     {
         if (ontology != null)
         {
@@ -67,7 +60,7 @@ public class Ontology
         }
     }
 
-    public void saveOntologyToFile(File file) throws OWLOntologyStorageException, OWLOntologyCreationException, IOException
+    public void saveOntologyToFile(File file) throws OWLOntologyStorageException
     {
         if (ontology != null)
         {
@@ -79,7 +72,7 @@ public class Ontology
     {
         reasonerFactory = new StructuralReasonerFactory();
         reasoner = reasonerFactory.createReasoner(ontology);
-        printOntologyToTreeView(root, thing);
+        printOntologyToTreeView(root, dataFactory.getOWLThing());
         reasoner.dispose();
     }
 
@@ -88,13 +81,16 @@ public class Ontology
         if (reasoner.isSatisfiable(cl))
         {
             int i = 0;
-            for (OWLClass child : reasoner.getSubClasses(cl, true).getFlattened())
+            Iterator<OWLClass> classIterator = reasoner.subClasses(cl, true).iterator();
+            while (classIterator.hasNext())
             {
-                if (!child.equals(cl) && reasoner.isSatisfiable(child))
+                OWLClass subClass = classIterator.next();
+
+                if (!subClass.equals(cl) && reasoner.isSatisfiable(subClass))
                 {
-                    String str = getShortForm(child.getIRI());
+                    String str = getShortForm(subClass.getIRI());
                     root.getChildren().add(new TreeItem<>(str));
-                    printOntologyToTreeView(root.getChildren().get(i), child);
+                    printOntologyToTreeView(root.getChildren().get(i), subClass);
                     i++;
 
                 }
@@ -111,16 +107,15 @@ public class Ontology
         OWLObjectProperty bottomProperty = ontologyManager.getOWLDataFactory().getOWLBottomObjectProperty();
         ArrayList<String> list = new ArrayList<>();
 
-        for (OWLObjectPropertyExpression child : reasoner.getSubObjectProperties(topProperty, false).getFlattened())
+        reasoner.subObjectProperties(topProperty, false).forEach(subObjectProperty ->
         {
-            if (!reasoner.getSubObjectProperties(child).isEmpty() && reasoner.getSubObjectProperties(child, true).containsEntity(bottomProperty))
+            if (!reasoner.getSubObjectProperties(subObjectProperty).isEmpty() && reasoner.getSubObjectProperties(subObjectProperty, true).containsEntity(bottomProperty))
             {
-                //String str = child.getNamedProperty().getIRI().getShortForm();
-                String str = getShortForm(child.getNamedProperty().getIRI());
+                String str = getShortForm(subObjectProperty.getNamedProperty().getIRI());
                 if (!list.contains(str))
                     list.add(str);
             }
-        }
+        });
 
         reasoner.dispose();
         return list;
@@ -135,16 +130,16 @@ public class Ontology
         OWLDataProperty bottomProperty = ontologyManager.getOWLDataFactory().getOWLBottomDataProperty();
         ArrayList<String> list = new ArrayList<>();
 
-        for (OWLDataProperty child : reasoner.getSubDataProperties(topProperty, false).getFlattened())
+        reasoner.subDataProperties(topProperty, false).forEach(subDataProperty ->
         {
-            if (!reasoner.getSubDataProperties(child).isEmpty() && reasoner.getSubDataProperties(child, true).containsEntity(bottomProperty))
+            if (!reasoner.getSubDataProperties(subDataProperty).isEmpty() && reasoner.getSubDataProperties(subDataProperty, true).containsEntity(bottomProperty))
             {
                 //String str = child.getNamedProperty().getIRI().getShortForm();
-                String str = getShortForm(child.getIRI());
+                String str = getShortForm(subDataProperty.getIRI());
                 if (!list.contains(str))
                     list.add(str);
             }
-        }
+        });
 
         reasoner.dispose();
         return list;
@@ -201,20 +196,16 @@ public class Ontology
 
         OWLObjectPropertyExpression property = ontologyManager.getOWLDataFactory().getOWLObjectProperty(propertyIRI);
 
-
-        for (OWLClass child : reasoner.getObjectPropertyRanges(property, true).getFlattened())
+        reasoner.objectPropertyRanges(property, true).forEach(propertyRange -> reasoner.subClasses(propertyRange, false).forEach(subClass ->
         {
-            for (OWLClass child2 : reasoner.getSubClasses(child, false).getFlattened())
+            if (!reasoner.getSubClasses(subClass).isEmpty() && reasoner.getSubClasses(subClass, true).containsEntity(Nothing))
             {
-                if (!reasoner.getSubClasses(child2).isEmpty() && reasoner.getSubClasses(child2, true).containsEntity(Nothing))
-                {
-                    //String str = child2.getIRI().getShortForm();
-                    String str = getShortForm(child2.getIRI());
-                    if (!list.contains(str))
-                        list.add(str);
-                }
+                //String str = child2.getIRI().getShortForm();
+                String str = getShortForm(subClass.getIRI());
+                if (!list.contains(str))
+                    list.add(str);
             }
-        }
+        }));
         reasoner.dispose();
         return list;
     }
@@ -225,10 +216,7 @@ public class Ontology
         reasoner = reasonerFactory.createReasoner(ontology);
 
         ArrayList<String> list = new ArrayList<>();
-        for (OWLNamedIndividual ind : ontology.getIndividualsInSignature())
-        {
-            list.add(getShortForm(ind.getIRI()));
-        }
+        ontology.individualsInSignature().forEach(individual -> list.add(getShortForm(individual.getIRI())));
         return list;
     }
 
@@ -294,12 +282,7 @@ public class Ontology
 
         ArrayList<String> list = new ArrayList<>();
 
-
-        for (OWLNamedIndividual ind : reasoner.getInstances(temp, true).getFlattened())
-        {
-            list.add(getShortForm(ind.getIRI()));
-        }
-
+        reasoner.instances(temp,true).forEach(individual -> list.add(getShortForm(individual.getIRI())));
 
         ontology.removeAxiom(tempAxiom);
 
@@ -335,23 +318,21 @@ public class Ontology
             axioms.add(assertionAxiom);
         }
 
-
-        ontologyManager.addAxioms(ontology, axioms);
+        Stream<OWLAxiom> axiomStream = axioms.stream();
+        ontologyManager.addAxioms(ontology, axiomStream);
 
     }
 
 
     public List<String> listOfInstancesOfClass(OWLClass cl)
     {
-        reasonerFactory = new JFactFactory();
+        //reasonerFactory = new JFactFactory();
+        reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(ontology);
 
         ArrayList<String> list = new ArrayList<>();
 
-        for (OWLNamedIndividual ind : reasoner.getInstances(cl, true).getFlattened())
-        {
-            list.add(getShortForm(ind.getIRI()));
-        }
+        reasoner.instances(cl,true).forEach(individual ->list.add(getShortForm(individual.getIRI())));
 
         reasoner.dispose();
         return list;
@@ -361,19 +342,22 @@ public class Ontology
     {
         OWLClass temp = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI("temp"));
         Set<OWLAxiom> axioms = new HashSet<>();
-        for(String str : listOfClass)
+        for (String str : listOfClass)
         {
             OWLClass cl = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI(str));
-            OWLSubClassOfAxiom subClassOfAxiom = dataFactory.getOWLSubClassOfAxiom(temp,cl);
+            OWLSubClassOfAxiom subClassOfAxiom = dataFactory.getOWLSubClassOfAxiom(temp, cl);
             axioms.add(subClassOfAxiom);
         }
-        ontologyManager.addAxioms(ontology,axioms);
-        boolean satisfable=false;
+
+        Stream<OWLAxiom> axiomStream = axioms.stream();
+
+        ontologyManager.addAxioms(ontology, axiomStream);
+        boolean satisfable = false;
         reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(ontology);
 
-        if(reasoner.isSatisfiable(temp))
-            satisfable=true;
+        if (reasoner.isSatisfiable(temp))
+            satisfable = true;
 
         OWLEntityRemover remover = new OWLEntityRemover(ontology);
         temp.accept(remover);
@@ -416,10 +400,7 @@ public class Ontology
 
     public boolean containsEntity(String entity)
     {
-        if (ontology != null)
-            return ontology.containsEntityInSignature(getEntityIRI(entity));
-        else
-            return false;
+        return ontology != null && ontology.containsEntityInSignature(getEntityIRI(entity));
     }
 
     public void deleteIndividual(String entity)
@@ -436,13 +417,4 @@ public class Ontology
         return ontology;
     }
 
-    public OWLReasoner getReasoner()
-    {
-        return reasoner;
-    }
-
-    public OWLOntologyManager getOntologyManager()
-    {
-        return ontologyManager;
-    }
 }

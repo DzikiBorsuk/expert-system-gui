@@ -4,13 +4,21 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -18,6 +26,13 @@ import java.util.Optional;
 
 public class Controller
 {
+
+    private static Controller mainInstance;
+
+
+    public static Controller getInstance() {
+        return mainInstance;
+    }
 
     @FXML
     TreeView<String> classHierarchy;
@@ -45,12 +60,22 @@ public class Controller
     ComboBox<String> ComboBoxRestriction;
     @FXML
     Button ButtonResetDataProperty, ButtonAddDataProperty;
+    @FXML
+    MenuItem SaveOntology,SaveOntologyAs;
 
 
     public void initialize()
     {
+        mainInstance=this;
+        SaveOntology.setDisable(true);
+        SaveOntologyAs.setDisable(true);
         // classHierarchy.setRoot(new TreeItem<>("Thing"));
         TextFieldDataProperty.textProperty().addListener((observable, oldValue, newValue) ->
+        {
+            if (!newValue.matches("\\d*"))
+                TextFieldDataProperty.setText(oldValue);
+        });
+        TextFieldDataPropertyNewIndividual.textProperty().addListener((observable, oldValue, newValue) ->
         {
             if (!newValue.matches("\\d*"))
                 TextFieldDataProperty.setText(oldValue);
@@ -89,6 +114,8 @@ public class Controller
                 TreeItem<String> rootItem = new TreeItem<>("Thing");
                 classHierarchy.setRoot(rootItem);
 
+                rootItem.setExpanded(true);
+
                 Main.getInstance().ontology.printOntologyToTreeView(rootItem);
 
                 ComboBoxSelectObjectProperty.setItems(
@@ -107,6 +134,14 @@ public class Controller
                 ComboBoxSelectDataPropertyNewIndividual.setItems(
                         FXCollections.observableArrayList(
                                 Main.getInstance().ontology.listOfDataProperties()));
+
+                ObjectPropertiesList.getItems().clear();
+                ObjectPropertiesListNewIndividual.getItems().clear();
+                DataPropertiesList.getItems().clear();
+                DataPropertiesListNewIndividual.getItems().clear();
+
+                SaveOntology.setDisable(false);
+                SaveOntologyAs.setDisable(false);
 
             } else
             {
@@ -167,14 +202,17 @@ public class Controller
     @FXML
     private void individualListItemSelected(MouseEvent event)
     {
-        String individual = IndividualList.getSelectionModel().getSelectedItem();
-        List<String> listOfObjectProperties = Main.getInstance().ontology.listOfObjectPropertiesOfIndividual(individual);
-        List<String> listOfDataProperties = Main.getInstance().ontology.listOfDataPropertiesOfIndividual(individual);
+        if (event.getButton().equals(MouseButton.PRIMARY))
+        {
+            String individual = IndividualList.getSelectionModel().getSelectedItem();
+            List<String> listOfObjectProperties = Main.getInstance().ontology.listOfObjectPropertiesOfIndividual(individual);
+            List<String> listOfDataProperties = Main.getInstance().ontology.listOfDataPropertiesOfIndividual(individual);
 
-        ObjectPropertiesList.setItems(FXCollections.observableArrayList(listOfObjectProperties));
-        DataPropertiesList.setItems(FXCollections.observableArrayList(listOfDataProperties));
-        ComboBoxSelectObjectProperty.getItems().clear();
-        ComboBoxSelectDataProperty.getItems().clear();
+            ObjectPropertiesList.setItems(FXCollections.observableArrayList(listOfObjectProperties));
+            DataPropertiesList.setItems(FXCollections.observableArrayList(listOfDataProperties));
+            ComboBoxSelectObjectProperty.getItems().clear();
+            ComboBoxSelectDataProperty.getItems().clear();
+        }
     }
 
     @FXML
@@ -248,7 +286,7 @@ public class Controller
     @FXML
     private void ButtonAddDataPropertyClick(ActionEvent event)
     {
-        if (ComboBoxRestriction.getValue() != null && ComboBoxSelectDataProperty.getValue() != null && TextFieldDataProperty.getText() != null)
+        if (ComboBoxRestriction.getValue() != null && ComboBoxSelectDataProperty.getValue() != null && !TextFieldDataProperty.getText().isEmpty())
         {
             DataPropertiesList.getItems().add(ComboBoxSelectDataProperty.getValue() + " " + ComboBoxRestriction.getValue() + " " + TextFieldDataProperty.getText());
             ComboBoxSelectDataProperty.getItems().remove(ComboBoxSelectDataProperty.getValue());
@@ -284,7 +322,7 @@ public class Controller
 
     public void ButtonAddDataPropertyNewIndividualClick(ActionEvent actionEvent)
     {
-        if (ComboBoxSelectDataPropertyNewIndividual.getValue() != null && TextFieldDataPropertyNewIndividual.getText() != null)
+        if (ComboBoxSelectDataPropertyNewIndividual.getValue() != null && !TextFieldDataPropertyNewIndividual.getText().isEmpty())
         {
             DataPropertiesListNewIndividual.getItems().add(ComboBoxSelectDataPropertyNewIndividual.getValue() + " = " + TextFieldDataPropertyNewIndividual.getText());
             ComboBoxSelectDataPropertyNewIndividual.getItems().remove(ComboBoxSelectDataPropertyNewIndividual.getValue());
@@ -418,6 +456,9 @@ public class Controller
                 ComboBoxSelectDataPropertyNewIndividual.setItems(
                         FXCollections.observableArrayList(
                                 Main.getInstance().ontology.listOfDataProperties()));
+
+                List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(ObjectPropertiesList.getItems(), DataPropertiesList.getItems());
+                IndividualList.setItems(FXCollections.observableArrayList(list));
             }
         }
     }
@@ -430,4 +471,95 @@ public class Controller
     }
 
 
+    public void ObjectPropertiesListItemSelected(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY))
+        {
+            if (mouseEvent.getClickCount() == 2)
+            {
+                String item = ObjectPropertiesList.getSelectionModel().getSelectedItem();
+                String[] splitStr = item.trim().split("\\s+");
+                ComboBoxSelectObjectProperty.getItems().add(splitStr[0]);
+                ObjectPropertiesList.getItems().remove(ObjectPropertiesList.getSelectionModel().getSelectedIndex());
+
+                List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(ObjectPropertiesList.getItems(), DataPropertiesList.getItems());
+                IndividualList.setItems(FXCollections.observableArrayList(list));
+            }
+        }
+    }
+
+    public void DataPropertiesListItemSelected(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY))
+        {
+            if (mouseEvent.getClickCount() == 2)
+            {
+                String item = DataPropertiesList.getSelectionModel().getSelectedItem();
+                String[] splitStr = item.trim().split("\\s+");
+                ComboBoxSelectDataProperty.getItems().add(splitStr[0]);
+                DataPropertiesList.getItems().remove(DataPropertiesList.getSelectionModel().getSelectedIndex());
+
+                List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(ObjectPropertiesList.getItems(), DataPropertiesList.getItems());
+                IndividualList.setItems(FXCollections.observableArrayList(list));
+            }
+        }
+    }
+
+    public void ObjectPropertiesListNewIndividualItemSelected(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY))
+        {
+            if (mouseEvent.getClickCount() == 2)
+            {
+                String item = ObjectPropertiesListNewIndividual.getSelectionModel().getSelectedItem();
+                String[] splitStr = item.trim().split("\\s+");
+                ComboBoxSelectObjectPropertyNewIndividual.getItems().add(splitStr[0]);
+                ObjectPropertiesListNewIndividual.getItems().remove(ObjectPropertiesListNewIndividual.getSelectionModel().getSelectedIndex());
+            }
+        }
+    }
+
+    public void DataPropertiesListNewIndividualItemSelected(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY))
+        {
+            if (mouseEvent.getClickCount() == 2)
+            {
+                String item = DataPropertiesListNewIndividual.getSelectionModel().getSelectedItem();
+                String[] splitStr = item.trim().split("\\s+");
+                ComboBoxSelectDataPropertyNewIndividual.getItems().add(splitStr[0]);
+                DataPropertiesListNewIndividual.getItems().remove(DataPropertiesListNewIndividual.getSelectionModel().getSelectedIndex());
+            }
+        }
+    }
+
+    public void DeleteIndividualClick(ActionEvent actionEvent)
+    {
+        Parent root;
+        if (Main.getInstance().ontology.getOntology()!=null)
+        {
+            try
+            {
+                root = FXMLLoader.load(getClass().getResource("delete_individual.fxml"));
+                Stage stage = new Stage();
+                stage.setTitle("Delete individual");
+                stage.setScene(new Scene(root, 600, 571));
+                Window window = MainWindow.getScene().getWindow();
+                stage.initOwner(window);
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.showAndWait();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ontology not loaded");
+            alert.setHeaderText(null);
+            alert.setContentText("Ontology not loaded");
+            alert.showAndWait();
+        }
+    }
 }

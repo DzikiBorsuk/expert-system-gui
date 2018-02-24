@@ -870,6 +870,7 @@
         <Class IRI="#Audi"/>
         <Class IRI="#BMW"/>
         <Class IRI="#Ford"/>
+        <Class IRI="#MAN"/>
         <Class IRI="#Mercedes"/>
         <Class IRI="#Opel"/>
         <Class IRI="#Skoda"/>
@@ -878,10 +879,130 @@
         <Class IRI="#Volvo"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Audi"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#AudiA4"/>
         <Class IRI="#AudiA6"/>
         <Class IRI="#AudiQ7"/>
         <Class IRI="#AudiR8"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMW"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#Ford"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MAN"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#Mercedes"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#Opel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#Skoda"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#Tesla"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#Volkswagen"/>
+        <Class IRI="#VolvoModel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AudiModel"/>
+        <Class IRI="#BMWModel"/>
+        <Class IRI="#FordModel"/>
+        <Class IRI="#MANModel"/>
+        <Class IRI="#MercedesModel"/>
+        <Class IRI="#OpelModel"/>
+        <Class IRI="#SkodaModel"/>
+        <Class IRI="#TeslaModel"/>
+        <Class IRI="#VolkswagenModel"/>
+        <Class IRI="#Volvo"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#AudiModel"/>
@@ -1028,7 +1149,7 @@
     <ClassAssertion>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasVehicleType"/>
-            <Class IRI="#Truck"/>
+            <Class IRI="#Car"/>
         </ObjectAllValuesFrom>
         <NamedIndividual IRI="#AudiQ7(2008)"/>
     </ClassAssertion>
