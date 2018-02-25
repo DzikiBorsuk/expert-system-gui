@@ -3,7 +3,6 @@ package expert_system_gui;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -47,7 +46,7 @@ public class DeleteController
 
     public void ButtonOkClick(ActionEvent actionEvent)
     {
-        for(String individual:individualToRemove)
+        for (String individual : individualToRemove)
         {
             Main.getInstance().ontology.deleteIndividual(individual);
         }
@@ -55,7 +54,7 @@ public class DeleteController
         List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(Controller.getInstance().ObjectPropertiesList.getItems(), Controller.getInstance().DataPropertiesList.getItems());
         Controller.getInstance().IndividualList.setItems(FXCollections.observableArrayList(list));
 
-       DeleteIndividualWindow.getScene().getWindow().hide();
+        DeleteIndividualWindow.getScene().getWindow().hide();
     }
 
     public void ButtonCancelClick(ActionEvent actionEvent)

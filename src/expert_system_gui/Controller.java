@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -30,7 +29,8 @@ public class Controller
     private static Controller mainInstance;
 
 
-    public static Controller getInstance() {
+    public static Controller getInstance()
+    {
         return mainInstance;
     }
 
@@ -61,12 +61,14 @@ public class Controller
     @FXML
     Button ButtonResetDataProperty, ButtonAddDataProperty;
     @FXML
-    MenuItem SaveOntology,SaveOntologyAs;
+    MenuItem SaveOntology, SaveOntologyAs;
+    @FXML
+    CheckMenuItem MenuItemShowSatisfiable;
 
 
     public void initialize()
     {
-        mainInstance=this;
+        mainInstance = this;
         SaveOntology.setDisable(true);
         SaveOntologyAs.setDisable(true);
         // classHierarchy.setRoot(new TreeItem<>("Thing"));
@@ -219,11 +221,34 @@ public class Controller
     private void ObjectPropertySelected(ActionEvent event)
     {
         String property = ComboBoxSelectObjectProperty.getValue();
-        if (property != null)
+        if (property != null && !property.isEmpty())
         {
-            ComboBoxSelectClass.setItems(
-                    FXCollections.observableArrayList(
-                            Main.getInstance().ontology.listOfClassesInRangeOfObjectProperties(property)));
+            List<String> list = Main.getInstance().ontology.listOfClassesInRangeOfObjectProperties(property);
+            List<String> elementsToDelete = new ArrayList<>();
+            if (!MenuItemShowSatisfiable.isSelected())
+            {
+                if (!ObjectPropertiesList.getItems().isEmpty())
+                {
+                    for (String elementToCheck : list)
+                    {
+                        List<String> listToCheck = new ArrayList<>();
+                        for (String str : ObjectPropertiesList.getItems())
+                        {
+                            String[] splitStr = str.trim().split("\\s+");
+
+                            listToCheck.add(splitStr[1]);
+                        }
+                        listToCheck.add(elementToCheck);
+
+                        if (!Main.getInstance().ontology.isClassSetSatisfiable(listToCheck))
+                            elementsToDelete.add(elementToCheck);
+                    }
+
+                    list.removeAll(elementsToDelete);
+                }
+            }
+
+            ComboBoxSelectClass.setItems(FXCollections.observableArrayList(list));
         }
     }
 
@@ -232,7 +257,7 @@ public class Controller
     private void DataPropertySelected(ActionEvent event)
     {
         String property = ComboBoxSelectDataProperty.getValue();
-        if (property != null)
+        if (property != null && !property.isEmpty())
         {
             if (Main.getInstance().ontology.hasDataPropertyNumericRange(property))
             {
@@ -361,7 +386,7 @@ public class Controller
             }
             list.add(ComboBoxSelectClassNewIndividual.getValue());
 
-            if (Main.getInstance().ontology.classSetIsSatisfiable(list))
+            if (Main.getInstance().ontology.isClassSetSatisfiable(list))
             {
                 ObjectPropertiesListNewIndividual.getItems().add(ComboBoxSelectObjectPropertyNewIndividual.getValue() + " " + ComboBoxSelectClassNewIndividual.getValue());
                 ComboBoxSelectObjectPropertyNewIndividual.getItems().remove(ComboBoxSelectObjectPropertyNewIndividual.getValue());
@@ -381,11 +406,34 @@ public class Controller
     public void ObjectPropertyNewIndividualSelected(ActionEvent actionEvent)
     {
         String property = ComboBoxSelectObjectPropertyNewIndividual.getValue();
-        if (property != null)
+        if (property != null && !property.isEmpty())
         {
-            ComboBoxSelectClassNewIndividual.setItems(
-                    FXCollections.observableArrayList(
-                            Main.getInstance().ontology.listOfClassesInRangeOfObjectProperties(property)));
+            List<String> list = Main.getInstance().ontology.listOfClassesInRangeOfObjectProperties(property);
+            List<String> elementsToDelete = new ArrayList<>();
+            if (!MenuItemShowSatisfiable.isSelected())
+            {
+                if (!ObjectPropertiesListNewIndividual.getItems().isEmpty())
+                {
+                    for (String elementToCheck : list)
+                    {
+                        List<String> listToCheck = new ArrayList<>();
+                        for (String str : ObjectPropertiesListNewIndividual.getItems())
+                        {
+                            String[] splitStr = str.trim().split("\\s+");
+
+                            listToCheck.add(splitStr[1]);
+                        }
+                        listToCheck.add(elementToCheck);
+
+                        if (!Main.getInstance().ontology.isClassSetSatisfiable(listToCheck))
+                            elementsToDelete.add(elementToCheck);
+                    }
+
+                    list.removeAll(elementsToDelete);
+                }
+            }
+
+            ComboBoxSelectClassNewIndividual.setItems(FXCollections.observableArrayList(list));
         }
     }
 
@@ -536,7 +584,7 @@ public class Controller
     public void DeleteIndividualClick(ActionEvent actionEvent)
     {
         Parent root;
-        if (Main.getInstance().ontology.getOntology()!=null)
+        if (Main.getInstance().ontology.getOntology() != null)
         {
             try
             {
@@ -552,8 +600,7 @@ public class Controller
             {
                 e.printStackTrace();
             }
-        }
-        else
+        } else
         {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ontology not loaded");
@@ -561,5 +608,11 @@ public class Controller
             alert.setContentText("Ontology not loaded");
             alert.showAndWait();
         }
+    }
+
+    public void MenuItemShowSatisfiableClicked(ActionEvent actionEvent)
+    {
+            ObjectPropertyNewIndividualSelected(actionEvent);
+            ObjectPropertySelected(actionEvent);
     }
 }

@@ -21,6 +21,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#DeleteIndividualClick" text="Delete" />
+                  <CheckMenuItem fx:id="MenuItemShowSatisfiable" mnemonicParsing="false" onAction="#MenuItemShowSatisfiableClicked" text="Show not satisfiable class" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
