@@ -17,7 +17,7 @@ public class DeleteController
     @FXML
     ListView<String> IndividualListToDelete;
 
-    List<String> individualToRemove = new ArrayList<>();
+    private final List<String> individualToRemove = new ArrayList<>();
 
     public void initialize()
     {

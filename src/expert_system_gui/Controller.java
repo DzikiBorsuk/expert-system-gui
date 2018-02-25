@@ -19,6 +19,7 @@ import javafx.stage.Window;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -69,8 +70,6 @@ public class Controller
     public void initialize()
     {
         mainInstance = this;
-        SaveOntology.setDisable(true);
-        SaveOntologyAs.setDisable(true);
         // classHierarchy.setRoot(new TreeItem<>("Thing"));
         TextFieldDataProperty.textProperty().addListener((observable, oldValue, newValue) ->
         {
@@ -249,6 +248,7 @@ public class Controller
             }
 
             ComboBoxSelectClass.setItems(FXCollections.observableArrayList(list));
+            ComboBoxSelectClass.getItems().sort(Comparator.comparing(String::toString));
         }
     }
 
@@ -434,6 +434,7 @@ public class Controller
             }
 
             ComboBoxSelectClassNewIndividual.setItems(FXCollections.observableArrayList(list));
+            ComboBoxSelectClassNewIndividual.getItems().sort(Comparator.comparing(String::toString));
         }
     }
 
