@@ -338,7 +338,7 @@ public class Ontology
         return list;
     }
 
-    public boolean classSetIsSatisfiable(List<String> listOfClass)
+    public boolean isClassSetSatisfiable(List<String> listOfClass)
     {
         OWLClass temp = ontologyManager.getOWLDataFactory().getOWLClass(getEntityIRI("temp"));
         Set<OWLAxiom> axioms = new HashSet<>();
