@@ -79,7 +79,7 @@ public class Controller
         TextFieldDataPropertyNewIndividual.textProperty().addListener((observable, oldValue, newValue) ->
         {
             if (!newValue.matches("\\d*"))
-                TextFieldDataProperty.setText(oldValue);
+                TextFieldDataPropertyNewIndividual.setText(oldValue);
         });
     }
 
@@ -461,7 +461,7 @@ public class Controller
 
     public void ButtonClearTextNewIndividualClick(ActionEvent actionEvent)
     {
-        TextFieldDataPropertyNewIndividual.clear();
+        TextFieldNewIndividual.clear();
     }
 
     public void ButtonAddNevIndividualClick(ActionEvent actionEvent)
