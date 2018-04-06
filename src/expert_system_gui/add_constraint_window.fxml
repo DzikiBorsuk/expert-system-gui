@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="EditCosntraintsWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expert_system_gui.AddConstraintController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="57.0" prefWidth="300.0" text="Constraints" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="20.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TreeView fx:id="ConstraintsTree" layoutX="17.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Label layoutX="480.0" layoutY="42.0" text="Add operation" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="50.0" />
+      <ComboBox fx:id="OperationComboBox" layoutX="340.0" layoutY="74.0" prefWidth="300.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
+      <ComboBox fx:id="ValueComboBox" layoutX="480.0" layoutY="156.0" prefWidth="300.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
+      <Button fx:id="AddOperationButton" layoutX="480.0" layoutY="112.0" mnemonicParsing="false" onAction="#AddOperationButtonClick" prefWidth="100.0" text="Add" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="105.0" />
+      <Button fx:id="AddValueButton" layoutX="624.0" layoutY="136.0" mnemonicParsing="false" onAction="#AddValueButtonClick" prefWidth="100.0" text="Add" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="215.0" />
+      <Label layoutX="484.0" layoutY="141.0" text="Add value" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="160.0" />
+      <TextField fx:id="ConstraintTextField" layoutX="480.0" layoutY="368.0" prefWidth="300.0" promptText="Constraint name" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="290.0" />
+      <Button fx:id="CancelButton" layoutX="680.0" layoutY="489.0" mnemonicParsing="false" onAction="#CancelButtonClick" prefWidth="100.0" text="Cancel" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="480.0" layoutY="270.0" text="Add new constraint" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="270.0" />
+      <Button fx:id="OKButton" layoutX="478.0" layoutY="509.0" mnemonicParsing="false" onAction="#OKButtonClick" prefWidth="100.0" text="Ok" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="222.0" />
+      <Button fx:id="AddConstraintButton" layoutX="480.0" layoutY="327.0" mnemonicParsing="false" onAction="#AddConstraintButtonClick" prefWidth="100.0" text="Add" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="325.0" />
+      <Button fx:id="DeleteNodeButton" layoutX="478.0" layoutY="408.0" mnemonicParsing="false" onAction="#DeleteNodeButtonClick" text="Delete selected node" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="408.0" />
+   </children>
+</AnchorPane>

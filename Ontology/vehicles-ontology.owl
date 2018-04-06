@@ -13,337 +13,406 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <DataProperty IRI="#hasEngineDisplacment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OpelAstra"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BMWM4"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkodaModel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasCompany"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolkswagenTiguana"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#4CylindersPetrolEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Ford"/>
+        <Class IRI="#AllWheelDrive"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Audi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasBody"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AudiQ7"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BMWS1000"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolkswagenGolf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MercedesBClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MANTGL"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FrontWheelDrive"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#2CylindersDieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#10CylinderPetrolEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MercedesSClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Transmission"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolkswagenPassat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TeslaModelX"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Cabrio"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FordMondeo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Car"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkodaFabia"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#StationWagon"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#6SpeedManualTransmission"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasNumberOfWheel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OpelVectra"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolvoV40"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#6CylindersPetrolEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OpelModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Powertrain"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BMWModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkodaOctavia"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasManufacturingYear"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolkswagenModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Tesla"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkodaSuperb"/>
+        <Class IRI="#AudiA4"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AudiA6"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#AudiModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#4CylindersDieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BMWX5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#MercedesS560(2017)"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AutomaticTransmission"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FordMustang"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OpelCorsa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#5SpeedManualTransmission"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolvoS80"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasHorsePower"/>
+        <Class IRI="#AudiQ7"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AudiR8"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Volvo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MercedesGLA"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolvoModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Volkswagen"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CombustionEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#8CylindersPetrolEngine"/>
+        <Class IRI="#AutomaticTransmission"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BMW"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Motorcycle"/>
+        <Class IRI="#BMWM4"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasVehicleType"/>
+        <Class IRI="#BMWModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TeslaModelS"/>
+        <Class IRI="#BMWS1000"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolvoFH"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Opel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ElectricEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VehiclePart"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AudiA4"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VehicleModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#6CylindersDieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FordFiesta"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PetrolEngine"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OpelZafira"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RearWheelDrive"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MANTGX"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#10CylinderDieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MAN"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MercedesModel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasTransmission"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Mercedes"/>
+        <Class IRI="#BMWX5"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Body"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Cabrio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CombustionEngine"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Company"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AudiModel"/>
+        <Class IRI="#DieselEngine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VolovXC60"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SUV"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TeslaModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FordFocus"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPowerTrain"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#2CylindersPetrolEngine"/>
+        <Class IRI="#ElectricEngine"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Engine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AllWheelDrive"/>
+        <Class IRI="#Ford"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Skoda"/>
+        <Class IRI="#FordFiesta"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Hatchback"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AudiQ7(2008)"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SkodaRapid"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MercedesCClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Vehicle"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Truck"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasVehicleModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#8CylindersDieselEngine"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VolksWagenPolo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ManualTransmission"/>
+        <Class IRI="#FordFocus"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FordModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+        <Class IRI="#FordMondeo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sedan"/>
+        <Class IRI="#FordMustang"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MANTGA"/>
+        <Class IRI="#FrontWheelDrive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hatchback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MAN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANF2000"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MANModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MANF2000"/>
+        <Class IRI="#MANTGA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANTGL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MANTGX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mercedes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesBClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesCClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesGLA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MercedesSClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motorcycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Opel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelAstra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelCorsa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelVectra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpelZafira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Powertrain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RearWheelDrive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SUV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sedan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skoda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaFabia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaOctavia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaRapid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkodaSuperb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StationWagon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tesla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModelS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeslaModelX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Truck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehiclePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolksWagenPolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volkswagen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenGolf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenPassat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolkswagenTiguana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolovXC60"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volvo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoFH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoS80"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolvoV40"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#10CylinderDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#10CylinderPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#5SpeedManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6SpeedManualTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#8CylindersDieselEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#8CylindersPetrolEngine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEngine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPowerTrain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTransmission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVehicleModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVehicleType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDragCoefficient"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFrontArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHorsePower"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasManufacturingYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaximumVelocity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPower"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ManTest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AudiQ7(2008)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BMWS1000RR(2011)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MercedesS560(2017)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AllWheelDrive"/>
@@ -1106,6 +1175,111 @@
     </DisjointClasses>
     <ClassAssertion>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#MAN"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#ManTest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Audi"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#8CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#AudiA4"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Audi"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#5SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#AudiA6"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasBody"/>
             <Class IRI="#SUV"/>
         </ObjectAllValuesFrom>
@@ -1155,6 +1329,55 @@
     </ClassAssertion>
     <ClassAssertion>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#SUV"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#BMW"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#BMWX5"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasCompany"/>
             <Class IRI="#BMW"/>
         </ObjectAllValuesFrom>
@@ -1197,6 +1420,202 @@
     </ClassAssertion>
     <ClassAssertion>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#SUV"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#BMW"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#8CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#BMWX5"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Hatchback"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Ford"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#2CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#5SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#FordFiesta"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Hatchback"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Ford"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#FordFocus"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Ford"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#5SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#FordMondeo"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasCompany"/>
             <Class IRI="#MAN"/>
         </ObjectAllValuesFrom>
@@ -1236,6 +1655,104 @@
             <Class IRI="#Truck"/>
         </ObjectAllValuesFrom>
         <NamedIndividual IRI="#MANTGX18.440(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Mercedes"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#RearWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#MercedesCClass"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#SUV"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Mercedes"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#MercedesGLA"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
     </ClassAssertion>
     <ClassAssertion>
         <ObjectAllValuesFrom>
@@ -1291,6 +1808,202 @@
             <ObjectProperty IRI="#hasBody"/>
             <Class IRI="#Sedan"/>
         </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Opel"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#5SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#OpelAstra"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Hatchback"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Opel"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#5SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#OpelCorsa"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Hatchback"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Skoda"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#8CylindersPetrolEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#SkodaFabia"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Skoda"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#SkodaRapid"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Sedan"/>
+        </ObjectAllValuesFrom>
         <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1335,6 +2048,302 @@
         </ObjectAllValuesFrom>
         <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Hatchback"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Tesla"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#ElectricEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#TeslaModelS"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#StationWagon"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Volkswagen"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VolkswagenGolf"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#StationWagon"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Volkswagen"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VolkswagenPassat"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Volvo"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#6CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#AllWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#AutomaticTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VolvoFH"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Truck"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#SUV"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCompany"/>
+            <Class IRI="#Volvo"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEngine"/>
+            <Class IRI="#4CylindersDieselEngine"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasPowerTrain"/>
+            <Class IRI="#FrontWheelDrive"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTransmission"/>
+            <Class IRI="#6SpeedManualTransmission"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleModel"/>
+            <Class IRI="#VolovXC60"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#Car"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#ManTest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#ManTest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDragCoefficient"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFrontArea"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">265</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPower"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">194907.17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">220</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#AudiA6(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEngineDisplacment"/>
         <NamedIndividual IRI="#AudiQ7(2008)"/>
@@ -1353,6 +2362,26 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasNumberOfWheel"/>
         <NamedIndividual IRI="#AudiQ7(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2993</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">381</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#BMWM50d(2014)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -1377,6 +2406,86 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4395</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">575</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#BMWX5M(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">197</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#FordFiesta(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">257</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#FordFocus(2009)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">103</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#FordMondeo(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
         <NamedIndividual IRI="#MANTGX18.440(2015)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12500</Literal>
     </DataPropertyAssertion>
@@ -1394,6 +2503,46 @@
         <DataProperty IRI="#hasNumberOfWheel"/>
         <NamedIndividual IRI="#MANTGX18.440(2015)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">170</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#MercedesBenzW205(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">170</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#MercedesGLA(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEngineDisplacment"/>
@@ -1416,6 +2565,86 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">151</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#OpelAstra(2010)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">172</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#OpelCorsa(2013)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1896</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">131</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#SkodaFabia(2007)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1598</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#SkodaRapid(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasHorsePower"/>
         <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">525</Literal>
@@ -1429,6 +2658,81 @@
         <DataProperty IRI="#hasNumberOfWheel"/>
         <NamedIndividual IRI="#TeslaModelS90D(2016)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">503</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#TeslaP90d(2015)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1968</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">140</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#VolkswagenGolf(2012)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEngineDisplacment"/>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1968</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">240</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#VolkswagenPassat(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHorsePower"/>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">550</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberOfWheel"/>
+        <NamedIndividual IRI="#VolvoFH(2016)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasManufacturingYear"/>
+        <NamedIndividual IRI="#VolvoXC60(2008)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2008</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasBody"/>
@@ -1478,8 +2782,16 @@
         <Class IRI="#Vehicle"/>
     </ObjectPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasDragCoefficient"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasEngineDisplacment"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFrontArea"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasHorsePower"/>
@@ -1490,8 +2802,16 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasMaximumVelocity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasNumberOfWheel"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPower"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1512,5 +2832,6 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
 

@@ -19,11 +19,13 @@ public class Main extends Application
 
 
     public Ontology ontology;
+    public ConstraintManager constraints;
 
 
     @Override
     public void start(Stage primaryStage) throws Exception
     {
+        System.out.println(System.getProperty("java.library.path"));
         mainInstance = this;
         Parent root = FXMLLoader.load(getClass().getResource("main_window.fxml"));
         Scene scene = new Scene(root, 1280, 720);
@@ -33,6 +35,7 @@ public class Main extends Application
         primaryStage.show();
 
         ontology = new Ontology();
+        constraints = new ConstraintManager();
     }
 
 

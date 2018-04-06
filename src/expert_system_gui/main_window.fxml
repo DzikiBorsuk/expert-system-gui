@@ -1,150 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="MainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expert_system_gui.Controller">
-   <children>
-      <MenuBar maxHeight="35.0" minHeight="35.0" prefHeight="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
+    <children>
+        <MenuBar maxHeight="35.0" minHeight="35.0" prefHeight="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="loadOntology" mnemonicParsing="false" onAction="#loadOntologyClick" text="Load" />
+                        <MenuItem fx:id="SaveOntology" disable="true" mnemonicParsing="false" onAction="#saveOntologyClick" text="Save" />
+                        <MenuItem fx:id="SaveOntologyAs" disable="true" mnemonicParsing="false" onAction="#saveOntologyAsClick" text="Save as" />
+                        <MenuItem mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Constraints">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadConstraintsClick" text="Load" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveConstraintsClick" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveAsConstraintsClick" text="Save as" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#DeleteIndividualClick" text="Delete individual" />
+                  <MenuItem mnemonicParsing="false" onAction="#EditConstraintsClick" text="Edit constraints" />
+                        <CheckMenuItem fx:id="MenuItemShowSatisfiable" mnemonicParsing="false" onAction="#MenuItemShowSatisfiableClicked" text="Show not satisfiable class" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane fx:id="SplitWindow" centerShape="false" dividerPositions="0.1878" layoutX="65.0" layoutY="79.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
             <items>
-              <MenuItem fx:id="loadOntology" mnemonicParsing="false" onAction="#loadOntologyClick" text="Load" />
-                  <MenuItem fx:id="SaveOntology" mnemonicParsing="false" onAction="#saveOntologyClick" text="Save" />
-                  <MenuItem fx:id="SaveOntologyAs" mnemonicParsing="false" onAction="#saveOntologyAsClick" text="Save as" />
-                  <MenuItem mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+                <AnchorPane fx:id="LeftSplitWindow" maxWidth="236.0" minHeight="0.0" minWidth="236.0" prefHeight="160.0" prefWidth="236.0">
+                    <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="48.0" text="Class hierarchy" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TreeView fx:id="classHierarchy" layoutX="17.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="RightSplitWindow" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TabPane fx:id="TabPane" layoutX="41.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab text="Search Ontology">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <TitledPane animated="false" collapsible="false" layoutX="57.0" layoutY="418.0" text="Object properties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="ObjectPropertiesList" onMouseClicked="#ObjectPropertiesListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" collapsible="false" layoutX="468.0" layoutY="81.0" text="Data properties" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="DataPropertiesList" layoutX="26.0" layoutY="36.0" onMouseClicked="#DataPropertiesListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" collapsible="false" layoutX="67.0" layoutY="428.0" text="Individuals" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="IndividualList" layoutX="-8.0" layoutY="1.0" onMouseClicked="#individualListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <ComboBox fx:id="ComboBoxSelectDataProperty" layoutX="21.0" layoutY="518.0" onAction="#DataPropertySelected" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="515.0" />
+                                                <ComboBox fx:id="ComboBoxSelectObjectProperty" layoutX="21.0" layoutY="515.0" onAction="#ObjectPropertySelected" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="515.0" />
+                                                <Button fx:id="ButtonResetObjectProperty" layoutX="20.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonResetObjectPropertyClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
+                                                <Button fx:id="ButtonAddObjectProperty" layoutX="190.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonAddObjectPropertyClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="590.0" />
+                                                <Button fx:id="ButtonResetDataProperty" layoutX="360.0" layoutY="585.0" mnemonicParsing="false" onAction="#ButtonResetDataPropertyClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
+                                                <Button fx:id="ButtonAddDataProperty" layoutX="532.0" layoutY="585.0" mnemonicParsing="false" onAction="#ButtonAddDataPropertyClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="590.0" />
+                                                <ComboBox fx:id="ComboBoxSelectClass" layoutX="21.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="545.0" />
+                                                <ComboBox fx:id="ComboBoxRestriction" layoutX="361.0" layoutY="545.0" prefHeight="31.0" prefWidth="160.0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="545.0" />
+                                                <TextField fx:id="TextFieldDataProperty" layoutX="521.0" layoutY="545.0" prefHeight="31.0" prefWidth="160.0" promptText="Value" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="545.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Add to ontology">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <TitledPane animated="false" collapsible="false" layoutX="45.0" layoutY="41.0" text="Object properties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="ObjectPropertiesListNewIndividual" onMouseClicked="#ObjectPropertiesListNewIndividualItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" collapsible="false" layoutX="366.0" layoutY="20.0" text="Data properties" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="DataPropertiesListNewIndividual" layoutX="26.0" layoutY="36.0" onMouseClicked="#DataPropertiesListNewIndividualItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TextField fx:id="TextFieldDataPropertyNewIndividual" layoutX="422.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Value" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="545.0" />
+                                                <ComboBox fx:id="ComboBoxSelectClassNewIndividual" layoutX="21.0" layoutY="540.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="545.0" />
+                                                <Button fx:id="ButtonAddDataPropertyNewIndividual" layoutX="530.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonAddDataPropertyNewIndividualClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="590.0" />
+                                                <Button fx:id="ButtonResetDataPropertyNewIndividual" layoutX="710.0" layoutY="423.0" mnemonicParsing="false" onAction="#ButtonResetDataPropertyNewIndividualClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
+                                                <Button fx:id="ButtonAddObjectPropertyNewIndividual" layoutX="298.0" layoutY="592.0" mnemonicParsing="false" onAction="#ButtonAddObjectPropertyNewIndividualClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="590.0" />
+                                                <ComboBox fx:id="ComboBoxSelectObjectPropertyNewIndividual" layoutX="21.0" layoutY="533.0" onAction="#ObjectPropertyNewIndividualSelected" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="515.0" />
+                                                <ComboBox fx:id="ComboBoxSelectDataPropertyNewIndividual" layoutX="357.0" layoutY="515.0" onAction="#DataPropertyNewIndividualSelected" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="515.0" />
+                                                <Button fx:id="ButtonResetObjectPropertyNewIndividual" layoutX="21.0" layoutY="592.0" mnemonicParsing="false" onAction="#ButtonResetObjectPropertyNewIndividualClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
+                                                <TitledPane collapsible="false" layoutX="703.0" layoutY="20.0" text="New Individual" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="320.0">
+                                                            <children>
+                                                                <TextField fx:id="TextFieldNewIndividual" promptText="Name of Individual" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </TextField>
+                                                                <Button fx:id="ButtonClearTextNewIndividual" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#ButtonClearTextNewIndividualClick" prefHeight="50.0" prefWidth="135.0" text="Clear name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                                                                <Button fx:id="ButtonAddNevIndividual" layoutX="241.0" layoutY="75.0" mnemonicParsing="false" onAction="#ButtonAddNevIndividualClick" prefHeight="50.0" prefWidth="135.0" text="Add" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" collapsible="false" layoutX="700.0" layoutY="240.0" prefHeight="256.0" prefWidth="322.0" text="Constraints" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="240.0">
+                                                    <content>
+                                                        <AnchorPane fx:id="Constraint" minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
+                                                            <children>
+                                                                <ListView fx:id="ConstraintsList" layoutX="26.0" layoutY="36.0" onMouseClicked="#ConstraintsListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <Button fx:id="ButtonAddConstraint" layoutX="700.0" layoutY="515.0" mnemonicParsing="false" onAction="#ButtonAddConstraintClick" prefWidth="150.0" text="Add constraint" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="515.0" />
+                                                <Button fx:id="ButtonShowDescription" layoutX="872.0" layoutY="515.0" mnemonicParsing="false" onAction="#ButtonShowDescriptionClick" prefWidth="150.0" text="Show description" AnchorPane.leftAnchor="872.0" AnchorPane.topAnchor="515.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </AnchorPane>
             </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#DeleteIndividualClick" text="Delete" />
-                  <CheckMenuItem fx:id="MenuItemShowSatisfiable" mnemonicParsing="false" onAction="#MenuItemShowSatisfiableClicked" text="Show not satisfiable class" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <SplitPane fx:id="SplitWindow" centerShape="false" dividerPositions="0.1878" layoutX="65.0" layoutY="79.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
-        <items>
-          <AnchorPane fx:id="LeftSplitWindow" maxWidth="236.0" minHeight="0.0" minWidth="236.0" prefHeight="160.0" prefWidth="236.0">
-               <children>
-                  <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="48.0" text="Class hierarchy" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TreeView fx:id="classHierarchy" layoutX="17.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children></AnchorPane>
-                    </content>
-                  </TitledPane>
-               </children>
-            </AnchorPane>
-          <AnchorPane fx:id="RightSplitWindow" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <TabPane layoutX="41.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <tabs>
-                      <Tab text="Search Ontology">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <TitledPane animated="false" collapsible="false" layoutX="57.0" layoutY="418.0" text="Object properties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
-                                             <children>
-                                                <ListView fx:id="ObjectPropertiesList" onMouseClicked="#ObjectPropertiesListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
-                                             </children>
-                                          </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" collapsible="false" layoutX="468.0" layoutY="81.0" text="Data properties" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="20.0">
-                                       <content>
-                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
-                                             <children>
-                                                <ListView fx:id="DataPropertiesList" layoutX="26.0" layoutY="36.0" onMouseClicked="#DataPropertiesListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" collapsible="false" layoutX="67.0" layoutY="428.0" text="Individuals" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0">
-                                       <content>
-                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
-                                             <children>
-                                                <ListView fx:id="IndividualList" layoutX="-8.0" layoutY="1.0" onMouseClicked="#individualListItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <ComboBox fx:id="ComboBoxSelectDataProperty" layoutX="21.0" layoutY="518.0" onAction="#DataPropertySelected" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="515.0" />
-                                    <ComboBox fx:id="ComboBoxSelectObjectProperty" layoutX="21.0" layoutY="515.0" onAction="#ObjectPropertySelected" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
-                                    <Button fx:id="ButtonResetObjectProperty" layoutX="20.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonResetObjectPropertyClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonAddObjectProperty" layoutX="190.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonAddObjectPropertyClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonResetDataProperty" layoutX="360.0" layoutY="585.0" mnemonicParsing="false" onAction="#ButtonResetDataPropertyClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonAddDataProperty" layoutX="532.0" layoutY="585.0" mnemonicParsing="false" onAction="#ButtonAddDataPropertyClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="590.0" />
-                                    <ComboBox fx:id="ComboBoxSelectClass" layoutX="21.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="545.0" />
-                                    <ComboBox fx:id="ComboBoxRestriction" layoutX="361.0" layoutY="545.0" prefHeight="31.0" prefWidth="160.0" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="545.0" />
-                                    <TextField fx:id="TextFieldDataProperty" layoutX="521.0" layoutY="545.0" prefHeight="31.0" prefWidth="160.0" promptText="Value" AnchorPane.leftAnchor="521.0" AnchorPane.topAnchor="545.0" />
-                                 </children></AnchorPane>
-                        </content>
-                      </Tab>
-                      <Tab text="Add to ontology">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <TitledPane animated="false" collapsible="false" layoutX="45.0" layoutY="41.0" text="Object properties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-                                       <content>
-                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
-                                             <children>
-                                                <ListView fx:id="ObjectPropertiesListNewIndividual" onMouseClicked="#ObjectPropertiesListNewIndividualItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" collapsible="false" layoutX="366.0" layoutY="20.0" text="Data properties" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="20.0">
-                                       <content>
-                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="320.0">
-                                             <children>
-                                                <ListView fx:id="DataPropertiesListNewIndividual" layoutX="26.0" layoutY="36.0" onMouseClicked="#DataPropertiesListNewIndividualItemSelected" prefWidth="294.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <TextField fx:id="TextFieldDataPropertyNewIndividual" layoutX="422.0" layoutY="545.0" prefHeight="31.0" prefWidth="320.0" promptText="Value" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="545.0" />
-                                    <ComboBox fx:id="ComboBoxSelectClassNewIndividual" layoutX="21.0" layoutY="540.0" prefHeight="31.0" prefWidth="320.0" promptText="Select class" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="545.0" />
-                                    <Button fx:id="ButtonAddDataPropertyNewIndividual" layoutX="530.0" layoutY="590.0" mnemonicParsing="false" onAction="#ButtonAddDataPropertyNewIndividualClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonResetDataPropertyNewIndividual" layoutX="710.0" layoutY="423.0" mnemonicParsing="false" onAction="#ButtonResetDataPropertyNewIndividualClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="590.0" />
-                                    <Button fx:id="ButtonAddObjectPropertyNewIndividual" layoutX="298.0" layoutY="592.0" mnemonicParsing="false" onAction="#ButtonAddObjectPropertyNewIndividualClick" prefWidth="150.0" text="Add" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="590.0" />
-                                    <ComboBox fx:id="ComboBoxSelectObjectPropertyNewIndividual" layoutX="21.0" layoutY="533.0" onAction="#ObjectPropertyNewIndividualSelected" prefHeight="31.0" prefWidth="320.0" promptText="Select object property" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="515.0" />
-                                    <ComboBox fx:id="ComboBoxSelectDataPropertyNewIndividual" layoutX="357.0" layoutY="515.0" onAction="#DataPropertyNewIndividualSelected" prefHeight="31.0" prefWidth="320.0" promptText="Select data property" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="515.0" />
-                                    <Button fx:id="ButtonResetObjectPropertyNewIndividual" layoutX="21.0" layoutY="592.0" mnemonicParsing="false" onAction="#ButtonResetObjectPropertyNewIndividualClick" prefWidth="150.0" text="Reset" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="590.0" />
-                                    <TitledPane collapsible="false" layoutX="703.0" layoutY="20.0" text="New Individual" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="320.0">
-                                             <children>
-                                                <TextField fx:id="TextFieldNewIndividual" promptText="Name of Individual" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </TextField>
-                                                <Button fx:id="ButtonClearTextNewIndividual" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#ButtonClearTextNewIndividualClick" prefHeight="50.0" prefWidth="135.0" text="Clear name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0" />
-                                                <Button fx:id="ButtonAddNevIndividual" layoutX="241.0" layoutY="75.0" mnemonicParsing="false" onAction="#ButtonAddNevIndividualClick" prefHeight="50.0" prefWidth="135.0" text="Add" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
-                                             </children>
-                                          </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                 </children></AnchorPane>
-                        </content>
-                      </Tab>
-                    </tabs>
-                  </TabPane>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+        </SplitPane>
+    </children>
 </AnchorPane>
