@@ -1,7 +1,9 @@
 package expert_system_gui;
 
 import javafx.application.Platform;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +20,7 @@ import javafx.stage.Window;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 public class Controller
@@ -65,7 +64,8 @@ public class Controller
     MenuItem SaveOntology, SaveOntologyAs;
     @FXML
     CheckMenuItem MenuItemShowSatisfiable;
-
+    @FXML
+    ListView<String> ConstraintsList;
 
     public void initialize()
     {
@@ -73,13 +73,17 @@ public class Controller
         // classHierarchy.setRoot(new TreeItem<>("Thing"));
         TextFieldDataProperty.textProperty().addListener((observable, oldValue, newValue) ->
         {
-            if (!newValue.matches("\\d*"))
+            if (!newValue.matches("\\d*(\\.\\d*)?"))
+            {
                 TextFieldDataProperty.setText(oldValue);
+            }
         });
         TextFieldDataPropertyNewIndividual.textProperty().addListener((observable, oldValue, newValue) ->
         {
-            if (!newValue.matches("\\d*"))
+            if (!newValue.matches("\\d*(\\.\\d*)?"))
+            {
                 TextFieldDataPropertyNewIndividual.setText(oldValue);
+            }
         });
     }
 
@@ -144,7 +148,8 @@ public class Controller
                 SaveOntology.setDisable(false);
                 SaveOntologyAs.setDisable(false);
 
-            } else
+            }
+            else
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("File does not exist.");
@@ -205,14 +210,58 @@ public class Controller
     {
         if (event.getButton().equals(MouseButton.PRIMARY))
         {
-            String individual = IndividualList.getSelectionModel().getSelectedItem();
-            List<String> listOfObjectProperties = Main.getInstance().ontology.listOfObjectPropertiesOfIndividual(individual);
-            List<String> listOfDataProperties = Main.getInstance().ontology.listOfDataPropertiesOfIndividual(individual);
+            if (event.getClickCount() == 2)
+            {
+                String individual = IndividualList.getSelectionModel().getSelectedItem();
+                List<String> listOfObjectProperties = Main.getInstance().ontology.listOfObjectPropertiesOfIndividual(individual);
+                List<String> listOfDataProperties = Main.getInstance().ontology.listOfDataPropertiesOfIndividual(individual);
 
-            ObjectPropertiesList.setItems(FXCollections.observableArrayList(listOfObjectProperties));
-            DataPropertiesList.setItems(FXCollections.observableArrayList(listOfDataProperties));
-            ComboBoxSelectObjectProperty.getItems().clear();
-            ComboBoxSelectDataProperty.getItems().clear();
+                ButtonResetObjectPropertyClick(null);
+                ButtonResetDataPropertyClick(null);
+                ObjectPropertiesList.setItems(FXCollections.observableArrayList(listOfObjectProperties));
+                DataPropertiesList.setItems(FXCollections.observableArrayList(listOfDataProperties));
+                for (String str : ObjectPropertiesList.getItems())
+                {
+                    String[] splitStr = str.trim().split("\\s+");
+
+                    ComboBoxSelectObjectProperty.getItems().remove(splitStr[0]);
+                }
+                for (String str : DataPropertiesList.getItems())
+                {
+                    String[] splitStr = str.trim().split("\\s+");
+
+                    ComboBoxSelectDataProperty.getItems().remove(splitStr[0]);
+                }
+                // ComboBoxSelectObjectProperty.getItems().clear();
+                // ComboBoxSelectDataProperty.getItems().clear();
+            }
+        }
+        else if (event.getButton().equals(MouseButton.SECONDARY))
+        {
+            if (event.getClickCount() == 2)
+            {
+                String individual = IndividualList.getSelectionModel().getSelectedItem();
+                List<String> listOfObjectProperties = Main.getInstance().ontology.listOfObjectPropertiesOfIndividual(individual);
+                List<String> listOfDataProperties = Main.getInstance().ontology.listOfDataPropertiesOfIndividual(individual);
+                ButtonResetObjectPropertyNewIndividualClick(null);
+                ButtonResetDataPropertyNewIndividualClick(null);
+                ObjectPropertiesListNewIndividual.setItems(FXCollections.observableArrayList(listOfObjectProperties));
+                DataPropertiesListNewIndividual.setItems(FXCollections.observableArrayList(listOfDataProperties));
+                for (String str : ObjectPropertiesListNewIndividual.getItems())
+                {
+                    String[] splitStr = str.trim().split("\\s+");
+
+                    ComboBoxSelectObjectPropertyNewIndividual.getItems().remove(splitStr[0]);
+                }
+                for (String str : DataPropertiesListNewIndividual.getItems())
+                {
+                    String[] splitStr = str.trim().split("\\s+");
+
+                    ComboBoxSelectDataPropertyNewIndividual.getItems().remove(splitStr[0]);
+                }
+                TextFieldNewIndividual.setText(individual);
+
+            }
         }
     }
 
@@ -240,7 +289,9 @@ public class Controller
                         listToCheck.add(elementToCheck);
 
                         if (!Main.getInstance().ontology.isClassSetSatisfiable(listToCheck))
+                        {
                             elementsToDelete.add(elementToCheck);
+                        }
                     }
 
                     list.removeAll(elementsToDelete);
@@ -289,9 +340,11 @@ public class Controller
         }
 
         if (ObjectPropertiesList.getItems().isEmpty() && DataPropertiesList.getItems().isEmpty())
+        {
             IndividualList.setItems(
                     FXCollections.observableArrayList(
                             Main.getInstance().ontology.listOfIndividuals()));
+        }
     }
 
     @FXML
@@ -299,7 +352,11 @@ public class Controller
     {
         if (ComboBoxSelectClass.getValue() != null && ComboBoxSelectObjectProperty.getValue() != null)
         {
-            ObjectPropertiesList.getItems().add(ComboBoxSelectObjectProperty.getValue() + " " + ComboBoxSelectClass.getValue());
+            String item = ComboBoxSelectObjectProperty.getValue() + " " + ComboBoxSelectClass.getValue();
+            if (!ObjectPropertiesList.getItems().contains(item))
+            {
+                ObjectPropertiesList.getItems().add(item);
+            }
             ComboBoxSelectObjectProperty.getItems().remove(ComboBoxSelectObjectProperty.getValue());
             ComboBoxSelectObjectProperty.getSelectionModel().select(0);
 
@@ -313,7 +370,11 @@ public class Controller
     {
         if (ComboBoxRestriction.getValue() != null && ComboBoxSelectDataProperty.getValue() != null && !TextFieldDataProperty.getText().isEmpty())
         {
-            DataPropertiesList.getItems().add(ComboBoxSelectDataProperty.getValue() + " " + ComboBoxRestriction.getValue() + " " + TextFieldDataProperty.getText());
+            String item = ComboBoxSelectDataProperty.getValue() + " " + ComboBoxRestriction.getValue() + " " + TextFieldDataProperty.getText();
+            if (!DataPropertiesList.getItems().contains(item))
+            {
+                DataPropertiesList.getItems().add(item);
+            }
             ComboBoxSelectDataProperty.getItems().remove(ComboBoxSelectDataProperty.getValue());
             ComboBoxSelectDataProperty.getSelectionModel().select(0);
 
@@ -339,9 +400,11 @@ public class Controller
         }
 
         if (ObjectPropertiesList.getItems().isEmpty() && DataPropertiesList.getItems().isEmpty())
+        {
             IndividualList.setItems(
                     FXCollections.observableArrayList(
                             Main.getInstance().ontology.listOfIndividuals()));
+        }
     }
 
 
@@ -349,7 +412,11 @@ public class Controller
     {
         if (ComboBoxSelectDataPropertyNewIndividual.getValue() != null && !TextFieldDataPropertyNewIndividual.getText().isEmpty())
         {
-            DataPropertiesListNewIndividual.getItems().add(ComboBoxSelectDataPropertyNewIndividual.getValue() + " = " + TextFieldDataPropertyNewIndividual.getText());
+            String item = ComboBoxSelectDataPropertyNewIndividual.getValue() + " = " + TextFieldDataPropertyNewIndividual.getText();
+            if (!DataPropertiesListNewIndividual.getItems().contains(item))
+            {
+                DataPropertiesListNewIndividual.getItems().add(item);
+            }
             ComboBoxSelectDataPropertyNewIndividual.getItems().remove(ComboBoxSelectDataPropertyNewIndividual.getValue());
             ComboBoxSelectDataPropertyNewIndividual.getSelectionModel().select(0);
 
@@ -388,10 +455,15 @@ public class Controller
 
             if (Main.getInstance().ontology.isClassSetSatisfiable(list))
             {
-                ObjectPropertiesListNewIndividual.getItems().add(ComboBoxSelectObjectPropertyNewIndividual.getValue() + " " + ComboBoxSelectClassNewIndividual.getValue());
+                String item = ComboBoxSelectObjectPropertyNewIndividual.getValue() + " " + ComboBoxSelectClassNewIndividual.getValue();
+                if (!ObjectPropertiesListNewIndividual.getItems().contains(item))
+                {
+                    ObjectPropertiesListNewIndividual.getItems().add(item);
+                }
                 ComboBoxSelectObjectPropertyNewIndividual.getItems().remove(ComboBoxSelectObjectPropertyNewIndividual.getValue());
                 ComboBoxSelectObjectPropertyNewIndividual.getSelectionModel().select(0);
-            } else
+            }
+            else
             {
 
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -426,7 +498,9 @@ public class Controller
                         listToCheck.add(elementToCheck);
 
                         if (!Main.getInstance().ontology.isClassSetSatisfiable(listToCheck))
+                        {
                             elementsToDelete.add(elementToCheck);
+                        }
                     }
 
                     list.removeAll(elementsToDelete);
@@ -470,7 +544,7 @@ public class Controller
         {
             String individual = TextFieldNewIndividual.getText();
             boolean overwrite = true;
-            if (Main.getInstance().ontology.containsEntity(individual))
+            if (Main.getInstance().ontology.containsIndividual(individual))
             {
 
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -487,7 +561,8 @@ public class Controller
                 if (result.get() == buttonTypeOne)
                 {
                     Main.getInstance().ontology.deleteIndividual(individual);
-                } else if (result.get() == buttonTypeTwo)
+                }
+                else if (result.get() == buttonTypeTwo)
                 {
                     overwrite = false;
                 }
@@ -528,7 +603,10 @@ public class Controller
             {
                 String item = ObjectPropertiesList.getSelectionModel().getSelectedItem();
                 String[] splitStr = item.trim().split("\\s+");
-                ComboBoxSelectObjectProperty.getItems().add(splitStr[0]);
+                if (!ComboBoxSelectObjectProperty.getItems().contains(splitStr[0]))
+                {
+                    ComboBoxSelectObjectProperty.getItems().add(splitStr[0]);
+                }
                 ObjectPropertiesList.getItems().remove(ObjectPropertiesList.getSelectionModel().getSelectedIndex());
 
                 List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(ObjectPropertiesList.getItems(), DataPropertiesList.getItems());
@@ -545,7 +623,10 @@ public class Controller
             {
                 String item = DataPropertiesList.getSelectionModel().getSelectedItem();
                 String[] splitStr = item.trim().split("\\s+");
-                ComboBoxSelectDataProperty.getItems().add(splitStr[0]);
+                if (!ComboBoxSelectDataProperty.getItems().contains(splitStr[0]))
+                {
+                    ComboBoxSelectDataProperty.getItems().add(splitStr[0]);
+                }
                 DataPropertiesList.getItems().remove(DataPropertiesList.getSelectionModel().getSelectedIndex());
 
                 List<String> list = Main.getInstance().ontology.listOfInstancesForSpecifiedData(ObjectPropertiesList.getItems(), DataPropertiesList.getItems());
@@ -562,7 +643,10 @@ public class Controller
             {
                 String item = ObjectPropertiesListNewIndividual.getSelectionModel().getSelectedItem();
                 String[] splitStr = item.trim().split("\\s+");
-                ComboBoxSelectObjectPropertyNewIndividual.getItems().add(splitStr[0]);
+                if (!ComboBoxSelectObjectPropertyNewIndividual.getItems().contains(splitStr[0]))
+                {
+                    ComboBoxSelectObjectPropertyNewIndividual.getItems().add(splitStr[0]);
+                }
                 ObjectPropertiesListNewIndividual.getItems().remove(ObjectPropertiesListNewIndividual.getSelectionModel().getSelectedIndex());
             }
         }
@@ -576,7 +660,10 @@ public class Controller
             {
                 String item = DataPropertiesListNewIndividual.getSelectionModel().getSelectedItem();
                 String[] splitStr = item.trim().split("\\s+");
-                ComboBoxSelectDataPropertyNewIndividual.getItems().add(splitStr[0]);
+                if (!ComboBoxSelectDataPropertyNewIndividual.getItems().contains(splitStr[0]))
+                {
+                    ComboBoxSelectDataPropertyNewIndividual.getItems().add(splitStr[0]);
+                }
                 DataPropertiesListNewIndividual.getItems().remove(DataPropertiesListNewIndividual.getSelectionModel().getSelectedIndex());
             }
         }
@@ -601,7 +688,8 @@ public class Controller
             {
                 e.printStackTrace();
             }
-        } else
+        }
+        else
         {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ontology not loaded");
@@ -613,7 +701,186 @@ public class Controller
 
     public void MenuItemShowSatisfiableClicked(ActionEvent actionEvent)
     {
-            ObjectPropertyNewIndividualSelected(actionEvent);
-            ObjectPropertySelected(actionEvent);
+        ObjectPropertyNewIndividualSelected(actionEvent);
+        ObjectPropertySelected(actionEvent);
+    }
+
+    public void loadConstraintsClick(ActionEvent actionEvent)
+    {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Load constraints file");
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+        fileChooser.getExtensionFilters().add(filter);
+        fileChooser.setInitialDirectory(new File("."));
+        Window window = MainWindow.getScene().getWindow();
+        File file = fileChooser.showOpenDialog(window);
+        //File file = new File("C:\\Users\\0bobe\\Desktop\\");
+
+        if (file != null)
+        {
+            if (file.exists())
+            {
+                try
+                {
+                    Main.getInstance().constraints.loadConstraintsFromFile(file.getAbsoluteFile());
+                } catch (Throwable e)
+                {
+                    e.getCause();
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle(null);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Could not load constraints.");
+                    alert.showAndWait();
+
+                }
+                ConstraintsList.setItems(FXCollections.observableArrayList(Main.getInstance().constraints.getConstraintsList()));
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("File does not exist.");
+                alert.setHeaderText(null);
+                alert.setContentText("\"" + file.getAbsolutePath() + "\" does not exist");
+                alert.showAndWait();
+            }
+        }
+    }
+
+    public void saveConstraintsClick(ActionEvent actionEvent)
+    {
+        try
+        {
+            Main.getInstance().constraints.saveConstraints();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Could not save constraints.");
+            alert.showAndWait();
+        }
+    }
+
+    public void saveAsConstraintsClick(ActionEvent actionEvent)
+    {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save constraints file");
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+        fileChooser.getExtensionFilters().add(filter);
+        fileChooser.setInitialDirectory(new File("."));
+        Window window = MainWindow.getScene().getWindow();
+        File file = fileChooser.showSaveDialog(window);
+        if (file != null)
+        {
+            try
+            {
+                Main.getInstance().constraints.saveConstraintsToFile(file);
+            } catch (Throwable e)
+            {
+                e.getCause();
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle(null);
+                alert.setHeaderText(null);
+                alert.setContentText("Could not save constraints to file.");
+                alert.showAndWait();
+            }
+        }
+    }
+
+    public void ConstraintsListItemSelected(MouseEvent mouseEvent)
+    {
+    }
+
+    public void ButtonAddConstraintClick(ActionEvent actionEvent)
+    {
+        String constraintName = ConstraintsList.getSelectionModel().getSelectedItem();
+        if (constraintName != null)
+        {
+            if (Main.getInstance().constraints.isLoaded())
+            {
+                List<String> inputs = Main.getInstance().constraints.getInputs(constraintName);
+                boolean ok = false;
+                List<String> propertiesList = DataPropertiesListNewIndividual.getItems();
+                HashMap<String, String> inputList = new HashMap<>();
+                for (Iterator<String> it = inputs.iterator(); it.hasNext(); )
+                {
+                    ok = false;
+                    String in = it.next();
+                    for (Iterator<String> iterator = propertiesList.iterator(); iterator.hasNext(); )
+                    {
+                        String prop = iterator.next();
+                        String[] splitStr = prop.trim().split("\\s+");
+                        if (splitStr[0].equals(in))
+                        {
+                            inputList.put(splitStr[0], splitStr[2]);
+                            ok = true;
+                            break;
+                        }
+                    }
+                }
+                if (ok == false)
+                {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle(null);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Not enough inputs");
+                    alert.showAndWait();
+                }
+                else
+                {
+                    String result = Main.getInstance().constraints.solve(constraintName, inputList);
+                    String[] splitResult = result.trim().split("\\s+");
+                    for (Iterator<String> iterator = propertiesList.iterator(); iterator.hasNext(); )
+                    {
+                        String prop = iterator.next();
+                        String[] splitStr = prop.trim().split("\\s+");
+                        if (splitStr[0].equals(splitResult[0]))
+                        {
+                            return;
+                        }
+                    }
+                    DataPropertiesListNewIndividual.getItems().add(result);
+                }
+            }
+        }
+    }
+
+    public void ButtonShowDescriptionClick(ActionEvent actionEvent)
+    {
+        String constraintName = ConstraintsList.getSelectionModel().getSelectedItem();
+        String description = Main.getInstance().constraints.getDescription(constraintName);
+        String content = description + System.lineSeparator() + System.lineSeparator() + "Inputs:" + System.lineSeparator();
+        Iterator<String> iterator = Main.getInstance().constraints.getInputs(constraintName).iterator();
+        while (iterator.hasNext())
+        {
+            String str = iterator.next();
+            content = content + str + System.lineSeparator();
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(null);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    public void EditConstraintsClick(ActionEvent actionEvent)
+    {
+        try
+        {
+            Parent root;
+            root = FXMLLoader.load(getClass().getResource("add_constraint_window.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Edit constraints");
+            stage.setScene(new Scene(root, 800, 560));
+            Window window = MainWindow.getScene().getWindow();
+            stage.initOwner(window);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }

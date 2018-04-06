@@ -37,6 +37,7 @@ public class Ontology
         ontologyManager = OWLManager.createOWLOntologyManager();
         dataFactory = ontologyManager.getOWLDataFactory();
         //reasonerFactory = new JFactFactory();
+
     }
 
 
@@ -401,6 +402,12 @@ public class Ontology
     public boolean containsEntity(String entity)
     {
         return ontology != null && ontology.containsEntityInSignature(getEntityIRI(entity));
+    }
+
+    public boolean containsIndividual(String individual)
+    {
+        List<String> individualList = listOfIndividuals();
+        return individualList.contains(individual);
     }
 
     public void deleteIndividual(String entity)

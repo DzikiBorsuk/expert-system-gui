@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constraints>
+    <constraint name="Maximum velocity">
+        <description>
+            Calculate maximum velocity of vehicle
+        </description>
+
+        <inputs>
+            <input name="hasPower"/>
+            <input name="hasDragCoefficient"/>
+            <input name="hasFrontArea"/>
+        </inputs>
+
+        <outputs>
+            <output name="hasMaximumVelocity"/>
+        </outputs>
+
+        <nodes>
+            <node name="multiplication">
+                <firstElement dataType="node">
+                    <node name="division">
+                        <firstElement dataType="constant">3600</firstElement>
+                        <secondElement dataType="constant">1000</secondElement>
+                    </node>
+                </firstElement>
+                <secondElement dataType="node">
+                    <node name="root">
+                        <firstElement dataType="node">
+                            <node name="division">
+                                <firstElement dataType="node">
+                                    <node name="multiplication">
+                                        <firstElement dataType="constant">2</firstElement>
+                                        <secondElement dataType="variable">hasPower</secondElement>
+                                    </node>
+                                </firstElement>
+                                <secondElement dataType="node">
+                                    <node name="multiplication">
+                                        <firstElement dataType="node">
+                                            <node name="multiplication">
+                                                <firstElement dataType="variable">hasDragCoefficient</firstElement>
+                                                <secondElement dataType="constant">1.25</secondElement>
+                                            </node>
+                                        </firstElement>
+                                        <secondElement dataType="variable">hasFrontArea</secondElement>
+                                    </node>
+                                </secondElement>
+                            </node>
+                        </firstElement>
+                        <secondElement dataType="constant">3</secondElement>
+                    </node>
+                </secondElement>
+            </node>
+        </nodes>
+
+    </constraint>
+
+    <constraint name="Convert Power">
+        <description>
+            Convert Horse Power to SI unit Power
+        </description>
+
+        <inputs>
+            <input name="hasHorsePower"/>
+        </inputs>
+
+        <outputs>
+            <output name="hasPower"/>
+        </outputs>
+        <nodes>
+            <node name="multiplication">
+                <firstElement dataType="variable">hasHorsePower</firstElement>
+                <secondElement dataType="constant">735.49875</secondElement>
+            </node>
+        </nodes>
+
+    </constraint>
+
+
+</constraints>

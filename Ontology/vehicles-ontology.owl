@@ -319,7 +319,13 @@
         <ObjectProperty IRI="#hasVehicleType"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasDragCoefficient"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasEngineDisplacment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFrontArea"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasHorsePower"/>
@@ -328,10 +334,16 @@
         <DataProperty IRI="#hasManufacturingYear"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasMaximumVelocity"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasNumberOfWheel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <DataProperty IRI="#hasPower"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ManTest"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AudiA6(2012)"/>
@@ -400,7 +412,7 @@
         <NamedIndividual IRI="#VolvoXC60(2008)"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ManTest"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AllWheelDrive"/>
@@ -2278,9 +2290,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasDragCoefficient"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasEngineDisplacment"/>
         <NamedIndividual IRI="#AudiA4(2014)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFrontArea"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.61</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasHorsePower"/>
@@ -2296,6 +2318,11 @@
         <DataProperty IRI="#hasNumberOfWheel"/>
         <NamedIndividual IRI="#AudiA4(2014)"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPower"/>
+        <NamedIndividual IRI="#AudiA4(2014)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">194907.17</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEngineDisplacment"/>
@@ -2755,8 +2782,16 @@
         <Class IRI="#Vehicle"/>
     </ObjectPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasDragCoefficient"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasEngineDisplacment"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFrontArea"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasHorsePower"/>
@@ -2767,8 +2802,16 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasMaximumVelocity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasNumberOfWheel"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPower"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
